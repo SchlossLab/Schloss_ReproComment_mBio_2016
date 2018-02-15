@@ -95,7 +95,39 @@ A motivating concept to improving the reproducibility of one's research is that 
 
 This work was supported in part by funding from the National Institutes of Health (5R25GM116149).
 
+\newpage
 
+***Table 1.*** Simple grid-based system for defining concepts that can be used to describe the validity of a result. This is a generalization of the approach used by Whitaker [@Whitaker2017] who used it to describe computational analyses.
+
+\vspace{1cm}
+
+\begin{center}
+    \begin{tabular}{ | c | c | c |}
+    \hline
+		& \textbf{Same Experimental System} & \textbf{Different Experimental System} \\ \hline
+		\textbf{Same Methods} & Reproducibility & Replicability \\ \hline
+		\textbf{Different Methods} & Robustness & Generalizability \\
+    \hline
+    \end{tabular}
+\end{center}
+
+\newpage
+
+***Table 2.*** A rubric for evaluating the practices researchers use to increase the reproducibility and replicability of their work. Although many of the questions can be thought of as having a yes or no answer, a better approach would be to see the questions as being open ended with the real question being, "What can I do to improve the status of my project on this point?". With that in mind, you'll never get 100% of the bullets right for your project, but you'll always be improving.
+
+\vspace{5mm}
+
+\begin{center}
+    \begin{tabular}{ | p{3cm} | p{4cm} | p{4cm} | p{4cm} |}
+    \hline
+		\textbf{Practice} & \textbf{Good} & \textbf{Better} & \textbf{Best} \\ \hline
+		Practice 1 & Good Practice & Better Practice & Best Practice \\ \hline
+		Practice 2 & Good Practice & Better Practice & Best Practice \\ \hline
+		Practice 3 & Good Practice & Better Practice & Best Practice \\ \hline
+		Practice 4 & Good Practice & Better Practice & Best Practice \\ \hline
+		Practice 5 & Good Practice & Better Practice & Best Practice \\ \hline
+    \end{tabular}
+\end{center}
 
 \newpage
 
