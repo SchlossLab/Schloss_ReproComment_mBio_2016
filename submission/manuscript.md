@@ -1,5 +1,3 @@
-HMP confounding
-
 # Reproducible Research Is Really F#$%ing Hard
 
 
@@ -49,6 +47,8 @@ The goals of this Perspective are three-fold. First, I hope to give a better fra
 **Reproducibility.** Threats to reproducibility are some of the most fundamental and easiest to lay fault on the original investigators. If a result cannot be reproduced, then it is difficult to have confidence that it can be replicated or generalized. Thus the ability to reproduce a result is critical.
 
 * Because of word limits in many journals, the Methods sections become a chain of citations to previous work that each cite previous work [@Collins2014]. The resulting rabbit holes can largely be addressed by improved documentation in supplementary materials or archives such as protocols.io (https://www.protocols.io) for lab-based methods or through GitHub (https://github.com) for data analysis workflows. For data analysis workflows, software such as GNU Make (https://www.gnu.org/software/make/) and the Common Workflow Language [@Amstutz2016] are available that allow one to track data dependencies and automate a workflow. For example, the workflow used in our obesity meta-analysis was written using GNU Make such that one should be able to get a copy of the scripts from the project's GitHub repository and write "make write.paper" from the command line to reproduce our analysis. These tools make it possible to trace the provenance of a summary statistic from the manuscript back to the raw data.
+
+* Problems with experimental design are often a threat to reproducibility because investigators fail to account for confounding variables. In sequence-based analyses, threats to reproducibility are encountered when samples are not randomized across sequencing runs. These so-called batch effects have been a problem with a large number of analytical techniques beyond sequencing [@Leek2010]. One notable example occurred within the Human Microbiome Project where 150 people were recruited in Houston, TX and 150 from St. Louis, MO [@HMP2012]. DNA extractions for the two sets of subjects were performed at Baylor College of Medicine and Washington University, respectively. The DNA from the Houston subjects were then sequenced at Baylor College of Medicine, the J. Craig Venter Institute, and the Broad Institute and the DNA from the St. Louis subject were sequenced at Washington University. The variable with the largest effect size was the subject's city, although all parties used the same standard operating procedures [@HMP2012; @Ding2014]. Because the city of origin and the center that did the extractions were perfectly confounded, it was impossible to quantify the impact of regional differences on the microbiome. Instead of being a single study, this became two replicate studies.
 
 * Access to the raw data behind a result is often not accessible and makes an analysis of a result's reproducibility impossible [@Langille2018; @Ravel2014]. Although well-established databases exist for sequence data, these data are still often missing, lack the necessary metadata, or are only available upon request from the original authors. As we developed the obesity meta-analysis we were dependent on the original authors to provide the information for two of the ten datasets. Furthermore, the data made available from the Turnbaugh et al study only provided the subjects' body mass index (BMI) as categories. The actual heights, weights, and BMIs were not available. Three large datasets from two studies were not included in the analysis because their data were practically inaccessible due to onerous data sharing agreements [@Zhernakova2016; @Goodrich2016]. Two other datasets required at least a month of effort to obtain [@HMP2012; @Zupancic2012]. Beyond sequence data, other data can be archived in databases including FigShare (https://figshare.com) and Dryad (https://datadryad.org).
 
@@ -126,7 +126,7 @@ This work was supported in part by funding from the National Institutes of Healt
 	\textbf{Practice} & \textbf{Good} & \textbf{Better} & \textbf{Best} \\ \hline
 	Handling of confounding variables
 	& Prior to generating data, did I identified a list of possible confounding variables - biological and technical - that may obscure the interpretation of my results?
-	& In my manuscript do I indicate the level of randomization and experimental blocking that I performed to minimize the effect of the confounding variables?
+	& In my manuscript do I indicate the level of randomization and experimental blocking that I performed to minimize the effect of the confounding variables (i.e. batch effects)?
 	& Does the interpretation of my results limit itself to only those variables that are not obviously confounded? \\ \hline
 
 	Experimental design considerations
