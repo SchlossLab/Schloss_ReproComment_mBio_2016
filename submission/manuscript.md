@@ -1,3 +1,4 @@
+HMP confounding
 
 # Reproducible Research Is Really F#$%ing Hard
 
@@ -41,9 +42,9 @@ The goals of this Perspective are three-fold. First, I hope to give a better fra
 
 ## Threats to reproducibility
 
-**Definitions.** One of the struggles in discussing reproducibility, replicability, and the factors that can limit them, is agreeing upon how they should be defined. The AAM report used the term reproducibility where others would use replicability (i.e. the ability to generate the same results after repeating the experiment independently of the first) [@Leek2015, @Patil2016, @Goodman2016]. The most widely used definitions are that reproducibility is the ability to regenerate a result when given the same dataset and data analysis workflow whereas replicability is the ability to produce a consistent result with an independent experiment asking the same scientific question [@Leek2015]. A similar framework has been proposed in which the same or different system or cohort are used and when the same or different methods are used (Figure 1) [@Whitaker2017]. This second framework highlights attempts to determine whether a result is robust to differences in methods or generalizable to different datasets that may have been collected under different conditions. Aside from issues of sloppiness, bias, and fraud, it is scientifically valuable to consider what factors threaten each of the quadrants in this framework. Whether a result holds up is not just a product of rigorous scientific practice, but also a product of stochastic forces [@Patil2016]. Furthermore, I emphatically agree that most research is exploratory and that scientists, editors, and funding agencies generally lack the will or ability to confirm previous studies via independent replications or attempts to generalize results in other model systems or human populations [@Casadevall2016; @Davies2016; @Collins2014]. Finally, just because a result is reproducible or even generalizable does not guarantee that the result is correct [@Leek2015]. Science is hard and failure to support an earlier observation does not indicate a failure, but a success of the scientific method.
+**Definitions.** One of the struggles in discussing reproducibility, replicability, and the factors that can limit them, is agreeing upon how they should be defined. The AAM report used the term reproducibility where others would use replicability (i.e. the ability to generate the same results after repeating the experiment independently of the first) [@Leek2015, @Patil2016, @Goodman2016]. The most widely used definitions are that reproducibility is the ability to regenerate a result when given the same dataset and data analysis workflow whereas replicability is the ability to produce a consistent result with an independent experiment asking the same scientific question [@Leek2015]. A similar framework has been proposed in which the same or different system or cohort are used and when the same or different methods are used (Table 1) [@Whitaker2017]. This second framework highlights attempts to determine whether a result is robust to differences in methods or generalizable to different datasets that may have been collected under different conditions. Aside from issues of sloppiness, bias, and fraud, it is scientifically valuable to consider what factors threaten each of the quadrants in this framework. Whether a result holds up is not just a product of rigorous scientific practice, but also a product of stochastic forces [@Patil2016]. Furthermore, I emphatically agree that most research is exploratory and that scientists, editors, and funding agencies generally lack the will or ability to confirm previous studies via independent replications or attempts to generalize results in other model systems or human populations [@Casadevall2016; @Davies2016; @Collins2014]. Finally, just because a result is reproducible or even generalizable does not guarantee that the result is correct [@Leek2015]. Science is hard and failure to support an earlier observation does not indicate a failure, but a success of the scientific method.
 
-**An example.** Several research groups, including mine [@Sze2016], have attempted to validate the result that obese individuals were more likely to have lower bacterial diversity and higher abundances of *Bacteroidetes* and lower abundances of *Firmicutes* in their feces [@Walters2014; @Finucane2014]. The original observation was published in 2008 using 16S rRNA gene sequencing and engendered much enthusiasm for the role of the microbiome in human health [@Turnbaugh2008]. Although the original study was performed using poorly reported data curation methods, we and others were able to independently obtain the same results as the original study when using the same dataset. The original result can thus be considered reproducible by the rubric in Figure 1. However, when we used the same methods with 9 other datasets, we failed to replicate the result. Similarly, other groups have failed to replicate the original result with their own data analysis workflows. This failure to replicate the original result may be due to methodological differences across the replicating studies, differences in study populations, or statistical variation. It is worth noting that those involved in the original Turnbaugh study pursued multiple approaches to better understand the question of whether the microbiota is important in obesity. They initially sought microbiome-based signatures using mouse models [@Turnbaugh2006, @Ley2005]. They observed stark differences in the microbiota of genetically lean and obese mice and that the microbiota of obese mice could transmit the propensity to gain weight to wild type germ free mice [@Turnbaugh2006]. In a human cohort, they generated multiple datasets from the same cohort that each reflected different regions of the 16S rRNA gene. In obese individuals, they observed reduced diversity and relative abundance of *Bacteroidetes* [@Turnbaugh2008]. They also used shotgun metagenomic sequencing to postulate the enrichment of carbohydrate processing genes in obese individuals [@Turnbaugh2008]. In a smaller cohort study, although the subjects' diversity remained constant, there was the predicted increase in *Bacteroidetes* as subjects lost weight [@Ley2006]. Although each part of their approach had significant weaknesses including methodological biases and underpowered experimental designs, their results supported the hypothesis that there were microbial signatures associated with obesity. Their overall conclusion appears to have been robust within this cohort. The inability to replicate these results in other cohorts indicated the conclusions were not generalizable.
+**An example.** Several research groups, including mine [@Sze2016], have attempted to validate the result that obese individuals were more likely to have lower bacterial diversity and higher abundances of *Bacteroidetes* and lower abundances of *Firmicutes* in their feces [@Walters2014; @Finucane2014]. The original observation was published in 2008 using 16S rRNA gene sequencing and engendered much enthusiasm for the role of the microbiome in human health [@Turnbaugh2008]. Although the original study was performed using poorly reported data curation methods, we and others were able to independently obtain the same results as the original study when using the same dataset. The original result can thus be considered reproducible by the key in Table 1. However, when we used the same methods with 9 other datasets, we failed to replicate the result. Similarly, other groups have failed to replicate the original result with their own data analysis workflows. This failure to replicate the original result may be due to methodological differences across the replicating studies, differences in study populations, or statistical variation. It is worth noting that those involved in the original Turnbaugh study pursued multiple approaches to better understand the question of whether the microbiota is important in obesity. They initially sought microbiome-based signatures using mouse models [@Turnbaugh2006, @Ley2005]. They observed stark differences in the microbiota of genetically lean and obese mice and that the microbiota of obese mice could transmit the propensity to gain weight to wild type germ free mice [@Turnbaugh2006]. In a human cohort, they generated multiple datasets from the same cohort that each reflected different regions of the 16S rRNA gene. In obese individuals, they observed reduced diversity and relative abundance of *Bacteroidetes* [@Turnbaugh2008]. They also used shotgun metagenomic sequencing to postulate the enrichment of carbohydrate processing genes in obese individuals [@Turnbaugh2008]. In a smaller cohort study, although the subjects' diversity remained constant, there was the predicted increase in *Bacteroidetes* as subjects lost weight [@Ley2006]. Although each part of their approach had significant weaknesses including methodological biases and underpowered experimental designs, their results supported the hypothesis that there were microbial signatures associated with obesity. Their overall conclusion appears to have been robust within this cohort. The inability to replicate these results in other cohorts indicated the conclusions were not generalizable.
 
 **Reproducibility.** Threats to reproducibility are some of the most fundamental and easiest to lay fault on the original investigators. If a result cannot be reproduced, then it is difficult to have confidence that it can be replicated or generalized. Thus the ability to reproduce a result is critical.
 
@@ -83,7 +84,9 @@ The goals of this Perspective are three-fold. First, I hope to give a better fra
 
 2. A graduate student was really excited to see an analysis that you performed in your most recent paper because the would like to reproduce it with their data. Before using their data, however, the want to make sure that they get the same results as you. What steps are likely to cause them problems? Take a figure from your recent paper and improve the likelihood that a third party would be able to reproduce it. Where are the data and how would they get them? What calculations were performed to summarize the data? What software was used to generate the figure? Is that software freely available? What steps need to be taken to generate the figure? When you are confident that you have made the figure as reproducible as you can, give the instructions to a colleague and ask for their feedback. Find your favorite figure from your favorite paper from a different research group. Can you reproduce the figure? What is standing in your way?
 
-3. Many of the threats to reproducibility and replicability are a product of scientific culture: methods sections are terse or vague, original data are not available, analyses rely on expensive and proprietary software, analysis scripts are available "upon request from the authors", papers are published behind pay-walls. Complete an audit of the reproducibility practices in your own research group. Have a discussion within your group about why you do things this way, whether your practices should change, and what would be the easiest to change. For your next paper, work improving one element of reproducibility. Develop an ethic of striving towards greater reproducibility.
+3. Many of the threats to reproducibility and replicability are a product of scientific culture: methods sections are terse or vague, original data are not available, analyses rely on expensive and proprietary software, analysis scripts are available "upon request from the authors", papers are published behind pay-walls. Complete an audit of the reproducibility practices in your own research group. Table 2 provides a rubric that someone working within the host-associated microbiome field might use to assess their research. Have a discussion within your group about why you do things this way, whether your practices should change, and what would be the easiest to change. For your next paper, work improving one element of reproducibility. Develop an ethic of striving towards greater reproducibility.
+
+
 
 
 ## Conclusion
@@ -113,20 +116,105 @@ This work was supported in part by funding from the National Institutes of Healt
 
 \newpage
 
-***Table 2.*** A rubric for evaluating the practices researchers use to increase the reproducibility and replicability of their work. Although many of the questions can be thought of as having a yes or no answer, a better approach would be to see the questions as being open ended with the real question being, "What can I do to improve the status of my project on this point?". With that in mind, you'll never get 100% of the bullets right for your project, but you'll always be improving.
-
-\vspace{5mm}
+***Table 2.*** An aspirational rubric for evaluating the practices host-associated microbiome researchers might use to increase the reproducibility and replicability of their work. Although many of the questions can be thought of as having a yes or no answer, a better approach would be to see the questions as being open ended with the real question being, "What can I do to improve the status of my project on this point?". With this in mind, a researcher is unlikely to have a project that satisfies the "Best" column for each line of the table. Researchers are encouraged to adapt the categories to modify the categories to suit their own needs.
 
 \begin{center}
-    \begin{tabular}{ | p{3cm} | p{4cm} | p{4cm} | p{4cm} |}
-    \hline
-		\textbf{Practice} & \textbf{Good} & \textbf{Better} & \textbf{Best} \\ \hline
-		Practice 1 & Good Practice & Better Practice & Best Practice \\ \hline
-		Practice 2 & Good Practice & Better Practice & Best Practice \\ \hline
-		Practice 3 & Good Practice & Better Practice & Best Practice \\ \hline
-		Practice 4 & Good Practice & Better Practice & Best Practice \\ \hline
-		Practice 5 & Good Practice & Better Practice & Best Practice \\ \hline
-    \end{tabular}
+	\scriptsize\setstretch{0.9}
+	\renewcommand{\arraystretch}{1.8}
+  \begin{tabular}{ | P{3cm} | P{4cm} | P{4cm} | P{4cm} |}
+  \hline
+	\textbf{Practice} & \textbf{Good} & \textbf{Better} & \textbf{Best} \\ \hline
+	Handling of confounding variables
+	& Prior to generating data, did I identified a list of possible confounding variables - biological and technical - that may obscure the interpretation of my results?
+	& In my manuscript do I indicate the level of randomization and experimental blocking that I performed to minimize the effect of the confounding variables?
+	& Does the interpretation of my results limit itself to only those variables that are not obviously confounded? \\ \hline
+
+	Experimental design considerations
+	& Do I have an active collaboration with a statistician who helps with experimental design and analysis?
+	& Do I indicate the number of hypothesis tests I performed and have I corrected any P-values for multiple comparisons?
+	& For my primary research questions, have I run a power analysis to determine the necessary sample size? \\ \hline
+
+	Data analysis plan
+	& Before starting an analysis, have I articulated a set of primary and secondary research questions
+	& Has someone else reviewed my data analysis plan prior to analyzing the data?
+	& Have I registered my data analysis plan with a third party before starting the project? \\ \hline
+
+	Provenance of reagents
+	& Does my manuscript have a table of all cell lines, strains, genotypes, and primer sequences used in the study?
+	& Where possible, have I obtained reagents from certified entities like the American Type Culture Collection (ATCC)?
+	& Is there a statement in the manuscript regarding how I know the provenance and purity of each cell line and strain used in my study? \\ \hline
+
+	Controlling for initial microbiota
+	& Are mice obtained from a breeding facility that allows me to track their pedigree?
+	& Prior to an experiment, are mice co-housed to control for differences in initial microbiota? Where possible, are mice from different treatment groups co-housed?
+	& Are comparisons between mice with different genotypes made using mice that are the result of matings between animals that are heterozygous for that genotype? \\ \hline
+
+	Clarity of methods descriptions
+	& Are all methods, databases, and software tools cited in the manuscript? Do I follow the relevant licensing requirements of each tool?
+	& Do I indicate dates and version numbers of websites that were used to obtain data, code, and other third party resources?
+	& Are detailed methods registered on a website like protocols.io or GitHub? \\ \hline
+
+	Sex as confounding variables
+	& Does my manuscript indicate the sex of research animals and participants?
+	& Do I provide a justification for the lack of even representation?
+	& Do I have even representation of male and females in my studies? Do I account for sex as a variable? \\ \hline
+
+	DNA contamination
+	& Did I quantify the background DNA concentration in my reagents? Did I sequence an extraction control?
+	& Am I taking steps to minimize reagent contamination?
+	& What methods do I take to confirm a result that a sequencing result may be clouded by contaminating DNA? \\ \hline
+
+	Availability of data products
+	& Is all of the raw data used in the manuscript publicly available?
+	& Are intermediate and final data files publicly available?
+	& Are tools like Amazon Machine Images (AMIs) used to make a snapshot of my working directory? \\ \hline
+
+	Availability of metadata
+	& Does the manuscript include the metadata necessary to repeat any analyses I performed?
+	& Have I adhered to standards in releasing a minimal amount of metadata about my samples?
+	& Did I go beyond the minimum to incorporate other pieces of metadata that will inform future studies? \\ \hline
+
+	Data analysis organization
+	& Are all data, code, results, and documentation housed within a monophyletic folder structure?
+	& Is this project contained within a single directory on my computer and does it separate my raw and processed data, code, documentation, and results?
+	& Is this folder structure under version control? Is the project's repository publicly available? Are there assurances that this repository will remain accessible? \\ \hline
+
+	Availability of data analysis tools
+	& Are free tools used in preference to proprietary commercial tools?
+	& Is all computer code available to run critical analyses through a service like GitHub?
+	& Are Amazon Machine Images or Docker containers used to allow recreation of my work environment? \\ \hline
+
+	Documentation of data analysis workflow
+	& Is my code well documented? Do I use a self-commenting coding practice?
+	& Do each of my scripts have a header indicating the inputs, outputs, and dependencies? Is it documented how files relate to each other?
+	& Are automated workflow tools like GNU Make and CommonWL used to convert raw data into final tables, figures, and summary statistics? \\ \hline
+
+	Use of random number generator
+	& Do I know whether any of the steps in my data analysis workflow depend on the use of a random number generator?
+	& For analyses that utilize a random number generator, have I noted the underlying random seed?
+	& Have I repeated my analysis with multiple seeds to show that the results are insensitive to the choice of the seed? \\ \hline
+
+	Defensive data analysis
+	& Is my data analysis pipeline flexible enough to add new data?
+	& Does my code include tests to confirm that it does what I think it does?
+	& Do I make use of automated tests and continuous integration tools to insure internal reproducibility? \\ \hline
+
+	Insuring short and longterm reproducibility
+	& Did I release the underlying code and new data at the time of submitting a paper?
+	& Did I include a reproducibility statement or declaration at the end of my paper(s)?
+	& What mechanisms are in place to insure my project remain accessible and reproducible in 5 years? \\ \hline
+
+	Open science to foster reproducibility
+	& Have I released any embargoes on my code repository and raw data prior to submitting the manuscript?
+	& Did I post a preprint version of my manuscript prior to official submission to a journal?
+	& Have I submitted my manuscript to an open access journal or have I published it under a Creative Commons license? \\ \hline
+
+	Transparency of data analysis
+	& Is it clear where one would go to find the data and processing steps behind any of my figures?
+	& Are electronic notebooks publicly accessible and accompany the manuscript?
+	& Were literate programming tools used so that summary statistics, tables, and figures are generated directly from the data?
+	 \\ \hline
+  \end{tabular}
 \end{center}
 
 \newpage
