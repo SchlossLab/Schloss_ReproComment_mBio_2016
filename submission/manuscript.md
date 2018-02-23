@@ -207,7 +207,7 @@ This work was supported in part by funding from the National Institutes of Healt
 	Open science to foster reproducibility
 	& Have I released any embargoes on my code repository and raw data prior to submitting the manuscript?
 	& Did I post a preprint version of my manuscript prior to official submission to a journal?
-	& Have I submitted my manuscript to an open access journal or have I published it under a Creative Commons license? \\ \hline
+	& Have I  published my manuscript under a Creative Commons license? Is a permissive reuse license posted with my code \\ \hline
 
 	Transparency of data analysis
 	& Is it clear where one would go to find the data and processing steps behind any of my figures?
