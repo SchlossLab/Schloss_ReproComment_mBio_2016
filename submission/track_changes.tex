@@ -1,0 +1,1609 @@
+\documentclass[]{article}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL submission/original.tex     Thu May  3 09:07:48 2018
+%DIF ADD submission/manuscript.tex   Thu May  3 09:04:09 2018
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[margin=1in]{geometry}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{helvet} % Helvetica font
+\renewcommand*\familydefault{\sfdefault} % Use the sans serif version of the font
+\usepackage[T1]{fontenc}
+
+\usepackage[none]{hyphenat}
+
+\usepackage{setspace}
+\doublespacing
+\setlength{\parskip}{1em}
+
+\usepackage{lineno}
+
+\usepackage{pdfpages}
+\usepackage{comment}
+
+\usepackage{array}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\date{}
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+
+\section{\DIFdelbegin \DIFdel{Reproducible Research Is Really F}%DIFDELCMD < \#%%%
+\DIFdel{\$\%ing
+Hard}\DIFdelend \DIFaddbegin \DIFadd{Identifying and overcoming threats to reproducibility,
+replicability, robustness, and generalizability in microbiome
+research}\DIFaddend }\DIFdelbegin %DIFDELCMD < \label{reproducible-research-is-really-fing-hard}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \label{identifying-and-overcoming-threats-to-reproducibility-replicability-robustness-and-generalizability-in-microbiome-research}
+\DIFaddend 
+
+\DIFaddbegin \textbf{\DIFadd{Running title:}} \DIFadd{Reproducible Research Is Really F}\#\DIFadd{\$\%ing Hard
+}
+
+\DIFaddend \vspace{25mm} Patrick D. Schloss\({^\dagger}\)
+
+\vspace{30mm}
+
+\(\dagger\) pschloss@umich.edu; Department of Microbiology and
+Immunology, University of Michigan, Ann Arbor, MI
+
+\vspace{30mm}
+
+\textbf{Format:} Perspective
+
+\textbf{Counts:} \textasciitilde \DIFdelbegin \DIFdel{4400 words plus 69 }\DIFdelend \DIFaddbegin \DIFadd{5500 words plus 71 }\DIFaddend references, 2
+tables, 0 figures, and a \DIFdelbegin \DIFdel{144 }\DIFdelend \DIFaddbegin \DIFadd{148 }\DIFaddend word abstract
+
+\newpage
+
+\linenumbers
+
+\subsection{Abstract}\label{abstract}
+
+The ``reproducibility crisis'' in science affects microbiology as much
+as any other area of inquiry, and microbiologists have long struggled to
+make their research reproducible. We need to respect that \DIFdelbegin \DIFdel{science and microbiology, in particular, are difficult. }\DIFdelend \DIFaddbegin \DIFadd{ensuring that
+our methods and results are sufficiently transparent is difficult. This
+difficulty is compounded in interdisciplinary fields such as microbiome
+research. }\DIFaddend There are many reasons why a \DIFdelbegin \DIFdel{result may not be reproducible or replicable. Even }\DIFdelend \DIFaddbegin \DIFadd{researcher is unable to reproduce
+a previous result and even }\DIFaddend if a result is reproducible, it may not be
+correct. \DIFdelbegin \DIFdel{This Perspective lays out }\DIFdelend \DIFaddbegin \DIFadd{Furthermore, failure to reproduce previous results have much to
+teach us about the scientific process and microbial life itself. This
+Perspective delineates }\DIFaddend a framework for \DIFdelbegin \DIFdel{improving the }\DIFdelend \DIFaddbegin \DIFadd{identifying and overcoming
+threats to }\DIFaddend reproducibility, replicability, robustness, and
+generalizability of \DIFdelbegin \DIFdel{a particular result. It then describes the
+factors that can threaten this framework and approaches microbiologists
+can take to overcome the threats. Finally, it provides several exercises
+for individuals and research groups who wish to gain a better
+appreciation of how own research practices facilitate reproducibility and replication by others . Failure to validate previous results have
+much to teach us about the scientific process and microbial life itself.
+}\DIFdelend \DIFaddbegin \DIFadd{microbiome research. Instead of seeing signs of a
+crisis in others' work, we need to appreciate the technical and social
+difficulties that limit reproducibility in the work of others as well as
+our own.
+}\DIFaddend 
+
+\textbf{Keywords:} Reproducibility, Microbiome, Scientific method,
+Research ethics, American Academy of Microbiology
+
+\newpage
+
+\subsection{Introduction}\label{introduction}
+
+On first blush, one might argue that any scientist should be able to
+reproduce another scientist's research with no friction. Yet two
+anecdotes suffice to describe why this is not the case. The first goes
+to the roots of microbiology when Antonie van Leeuwenhoek submitted a
+letter to the Royal Society in 1677, ``Concerning little animals'' (1).
+This seminal work and several of his prior investigations described
+novel observations of microorganisms, but the scientific community
+rejected his observations for several reasons. First, because
+Leeuwenhoek had little interest in sharing his methods with others, they
+could not be \DIFdelbegin \DIFdel{replicated}\DIFdelend \DIFaddbegin \DIFadd{reproduced}\DIFaddend . Second, he wrote in ``low Dutch'' and his
+writing was translated to English and edited to half their original
+length. This likely removed a significant amount of information
+regarding his methods. After several failures, Robert Hooke refined his
+\DIFaddbegin \DIFadd{own }\DIFaddend compound microscope and was able to reproduce Leeuwenhoek's
+observations. The precision of Hooke's observations was hindered by his
+use of a compound microscope, which had inferior optics to that of
+Leeuwenhoek's single lens microscope. In the process, Hooke popularized
+the compound microscope. This succession of events is illustrative of
+many of the current problems microbiologists face in \DIFdelbegin \DIFdel{reproducing and
+replicating }\DIFdelend \DIFaddbegin \DIFadd{validating }\DIFaddend each
+other's work. \DIFdelbegin \DIFdel{Of course, }\DIFdelend \DIFaddbegin \DIFadd{Time has proven that }\DIFaddend Leeuwenhoek's work was rigorous,
+impactful, and robust. It was not sloppy and there was no fraud. But, it
+required multiple efforts by one of the greatest minds in science to
+\DIFdelbegin \DIFdel{replicate }\DIFdelend \DIFaddbegin \DIFadd{reproduce the results }\DIFaddend and even then it was a poor \DIFdelbegin \DIFdel{replication }\DIFdelend \DIFaddbegin \DIFadd{reproduction }\DIFaddend of the
+original.
+
+The second anecdote took place more recently. In 2011 Philip Bourne
+challenged those attending the \emph{Beyond the PDF} workshop
+(https://sites.google.com/site/beyondthepdf/) to reproduce the analysis
+performed in his group's 2010 study \emph{The} Mycobacterium
+tuberculosis \emph{Drugome and Its Polypharmacological Implications}
+(2). The response to that challenge resulted in a collaborative analysis
+involving the original authors and scientists from Spain, China, and the
+United States that challenged concepts critical to understanding
+reproducible research (3). The reanalysis demonstrated that the value of
+reproducibility, the degree to which research should be reproducible,
+the amount of effort required to reproduce the research, and who should
+be able to reproduce the research are questions without simple answers.
+\DIFdelbegin \DIFdel{Few would suggest that }\DIFdelend Bourne's \DIFdelbegin \DIFdel{group was sloppy or that they failed to
+be transparent}\DIFdelend \DIFaddbegin \DIFadd{track record in science and as a leader in the field of
+bioinformatics suggest that his group was not sloppy and his challenge
+indicated a level of transparency that is rare in science}\DIFaddend . Yet the
+investigators who sought to reproduce the findings found that someone
+with basic bioinformatics skills would require at least 160 hours to
+decipher the approaches used in the original analysis and an additional
+120 hours to implement them to complete the reproduction.
+
+Both of these anecdotes are at odds with the tone of a recent report by
+the American Academy for Microbiology's (AAM's) 2015 colloquium,
+``Promoting Responsible Scientific Research'' and its accompanying
+editorial in \emph{mBio} (4, 5). The report is a useful lens into how
+microbiologists view the reliability of research in their field. The
+colloquium identified ``(i) sloppy science, (ii) selection and
+experimental bias, and (iii) misconduct'' as the primary contributors to
+the ongoing problems with insuring the reliability of microbiology
+research. Although the participants were quick to point out that
+misconduct was a relatively minor contributor to the problem, the four
+case studies that accompanied the original report all concern
+misconduct. Missing from these reports was any of the nuance or humility
+enveloped in Leeuwenhoek's case or Bourne's challenge: insuring that
+one's research design and methods are sufficiently clear is enormously
+difficult. Researchers are frequently frustrated \DIFaddbegin \DIFadd{with their own lack of
+documentation }\DIFaddend when they are contacted about a forgotten detail years
+after a paper is published. Put simply, most problems with
+reproducibility \DIFdelbegin \DIFdel{and replicability }\DIFdelend are not due to sloppy science, bias, or misconduct. \DIFaddbegin \DIFadd{I
+contend that many of the difficulties we face in ensuring the
+reproducibility of our research is social and driven by cultural forces
+within science.
+}\DIFaddend 
+
+Although the issues identified by the AAM colloquium participants are
+important, this Perspective argues that they are not the main reason for
+a reproducibility crisis in microbiology. It is scientifically valuable
+to consider what other factors threaten our ability to \DIFdelbegin \DIFdel{validate }\DIFdelend \DIFaddbegin \DIFadd{reproduce }\DIFaddend a
+result. Although these factors highlight the technical limitations \DIFaddbegin \DIFadd{and
+cultural forces }\DIFaddend we face, our inability to validate a result may also
+indicate that we still have much to learn about biology. Furthermore, we
+must remember that whether we can validate a result is not just a
+product of rigorous scientific practice, but also a product of
+stochastic forces (6\DIFaddbegin \DIFadd{, 7}\DIFaddend ). We must also be on guard against assuming that
+just because a result is reproducible that it is correct (\DIFdelbegin \DIFdel{7}\DIFdelend \DIFaddbegin \DIFadd{8}\DIFaddend ). With these
+general points in mind, the goals of this Perspective are three-fold.
+First, I present a framework for thinking about how science is conducted
+within the microbial sciences. Second, I provide an overview of various
+factors that threaten the field's ability to validate prior results and
+the tools that we can use to overcome these problems. Third, based on
+these issues, I provide five exercises that research groups can use to
+motivate important discussions of their practices and how \DIFdelbegin \DIFdel{they }\DIFdelend \DIFaddbegin \DIFadd{their
+practices }\DIFaddend foster or impede efforts to validate \DIFdelbegin \DIFdel{their }\DIFdelend \DIFaddbegin \DIFadd{the researchers' }\DIFaddend results.
+Although I will primarily focus on examples from microbiome research,
+the principles are generalizable to other areas of microbiology \DIFaddbegin \DIFadd{as all
+scientists struggle to ensure the reproducibility of their research}\DIFaddend .
+
+\subsection{Threats to
+reproducibility}\label{threats-to-reproducibility}
+
+\textbf{Developing a framework.} One of the struggles in discussing
+reproducibility, replicability, and the factors that can limit them, is
+agreeing upon how they should be defined \DIFaddbegin \DIFadd{(7). Reproducibility is used as
+a vague term for being able to repeat another researchers' work whether
+that is with the same protocols or the same populations}\DIFaddend . \DIFdelbegin \DIFdel{The AAM report used the term reproducibility where others would use replicability. }\DIFdelend This
+Perspective will use \DIFdelbegin \DIFdel{the most widely used definitions, which describe
+reproducibility as the }\DIFdelend \DIFaddbegin \DIFadd{definitions that have greater precision and that
+are based on definitions that are widely used in the statistics
+literature. Reproducibility is the }\DIFaddend ability to regenerate a result with
+the same dataset and data analysis workflow and replicability \DIFdelbegin \DIFdel{as }\DIFdelend \DIFaddbegin \DIFadd{is }\DIFaddend the
+ability to produce a consistent result with an independent experiment
+asking the same scientific question (\DIFdelbegin \DIFdel{7}\DIFdelend \DIFaddbegin \DIFadd{8}\DIFaddend ). I propose a similar framework
+that accounts for the practice of applying multiple methods to the same
+samples to improve the robustness and generalizability of a result
+(Table 1) (\DIFdelbegin \DIFdel{9}\DIFdelend \DIFaddbegin \DIFadd{10}\DIFaddend ). It is critical for scientists to give attention to the
+right hand column of the framework. Most research is exploratory and
+scientists, editors, and funding agencies generally lack the will or
+ability to confirm previous studies via independent replications or
+attempts to generalize results in other model systems or human
+populations (4, 5, \DIFdelbegin \DIFdel{10}\DIFdelend \DIFaddbegin \DIFadd{7, 11}\DIFaddend ). Results must be reproducible and robust, but
+they \DIFdelbegin \DIFdel{must also }\DIFdelend \DIFaddbegin \DIFadd{also need to }\DIFaddend be replicable and generalizable.
+
+\textbf{An example.} \DIFaddbegin \DIFadd{The question of whether there are microbiome-based
+signatures of obesity is a useful illustration to demonstrate the
+factors that affect each of the quadrants of the grid in Table 1 and it
+can be used to underscore the difficulty of ensuring the
+reproducibility, replicability, robustness, and generalizability of
+results. }\DIFaddend Several research groups, including mine (\DIFdelbegin \DIFdel{11}\DIFdelend \DIFaddbegin \DIFadd{12}\DIFaddend ), have attempted to
+validate the result that obese individuals were more likely to have
+lower bacterial diversity and relative abundances of
+\emph{Bacteroidetes} (\DIFdelbegin \DIFdel{12, }\DIFdelend 13\DIFaddbegin \DIFadd{, 14}\DIFaddend ). The original observation was published in
+2008 using 16S rRNA gene sequence data and continues to engender much
+enthusiasm for the role of the microbiome in human health (\DIFdelbegin \DIFdel{14). Although
+}\DIFdelend \DIFaddbegin \DIFadd{15). It is
+important to note that }\DIFaddend the original study was \DIFaddbegin \DIFadd{one of the first to use
+high throughput amplicon sequencing and so there was minimal
+infrastructure to deposit and store such sequences in public databases.
+Furthermore, many of the software tools that we now rely on for
+facilitating reproducible workflows were not available. Regardless,
+although the original study was }\DIFaddend performed using poorly described data
+curation methods, we were able to independently obtain the same results
+as the original study when using the same dataset. The original result
+can thus be considered reproducible (Table 1). However, when we used the
+same methods with data from nine other cohorts, we \DIFaddbegin \DIFadd{and others have
+}\DIFaddend failed to replicate the result (\DIFdelbegin \DIFdel{11--13}\DIFdelend \DIFaddbegin \DIFadd{12--14}\DIFaddend ). These failures to replicate the
+original result may be due to methodological differences across the
+replicating studies, differences in study populations, or statistical
+variation. \DIFdelbegin \DIFdel{It }\DIFdelend \DIFaddbegin \DIFadd{Our study demonstrated that each of ten cohorts were
+significantly underpowered to identify a 10\% difference in Shannon
+diversity (12). Therefore, the lack of statistical power may have been
+responsible for an inability to detect a difference. Each of these
+studies were rather large for the time that they were published within
+the development of the microbiome research field and so the original
+researchers likely thought they had obtained the best statistical power
+that was feasible. Identifying what a biologically meaningful difference
+in any parameter within the microbiome literature to complete a
+meaningful power analysis has been a challenge. Each of these factors
+still make it nearly impossible to perform a meaningful }\emph{\DIFadd{a priori}}
+\DIFadd{power analysis to aid in the design of any cohort. Next, it }\DIFaddend is worth
+noting that those involved in the original study pursued multiple
+approaches to better understand the question of whether the microbiota
+is important in obesity. They initially sought microbiome-based
+signatures using mouse models (\DIFdelbegin \DIFdel{15}\DIFdelend \DIFaddbegin \DIFadd{16}\DIFaddend ). They observed stark differences in
+the microbiota of genetically lean and obese mice and that the
+microbiota of obese mice could transmit the propensity to gain weight to
+germ free mice (\DIFdelbegin \DIFdel{15}\DIFdelend \DIFaddbegin \DIFadd{16}\DIFaddend ). In a human cohort, they generated multiple datasets
+that each reflected different regions of the 16S rRNA gene. In obese
+individuals, they observed lower diversity and relative abundance of
+\emph{Bacteroidetes} (\DIFdelbegin \DIFdel{14}\DIFdelend \DIFaddbegin \DIFadd{15}\DIFaddend ). They also used shotgun metagenomic sequencing
+to postulate the enrichment of carbohydrate processing genes in obese
+individuals (\DIFdelbegin \DIFdel{14}\DIFdelend \DIFaddbegin \DIFadd{15}\DIFaddend ). In a smaller cohort study, although the subjects'
+diversity remained constant, as the authors predicted, the relative
+abundance of \emph{Bacteroidetes} increased as the subjects lost weight
+(\DIFdelbegin \DIFdel{17}\DIFdelend \DIFaddbegin \DIFadd{18}\DIFaddend ). Although each part of their approach had significant weaknesses
+including methodological biases and underpowered experimental designs,
+their results supported the hypothesis that there are microbial
+signatures associated with obesity. This conclusion was robust within
+the cohort they studied, but it was not generalizable to other cohorts.
+\DIFaddbegin \DIFadd{Within this example it is apparent that scientists acted in good faith
+given the technological and cultural conditions that they were working
+in. These conditions underscore the difficulty of replicating and
+generalizing results.
+}\DIFaddend 
+
+\textbf{Reproducibility.} Threats to reproducibility are some of the
+most fundamental and easiest to lay fault on the original investigators.
+If a result cannot be reproduced, then it is difficult to have
+confidence that it can be replicated or generalized. Thus the ability to
+reproduce a result is critical.
+
+\DIFdelbegin \DIFdel{Because many journals impose word limits on manuscripts, Materials and
+Methods sections become a chain of citations to previous work that each
+cite previous work (10). Improved documentation in supplementary
+materials or archives such as protocols.io (https://www.protocols.io)
+for lab-based methods or through GitHub (https://github.com) for data
+analysis workflows would make it easier for researchers to avoid these
+rabbit holes. For data analysis workflows, software such as GNU Make
+(https://www.gnu.org/software/make/) and the Common Workflow Language
+(18) make it possible to track data dependencies and automate a
+workflow. For example, we used GNU Make to write a workflow in our
+meta-analysis of the obesity data , such that
+downloading a copy of the scripts from the project's GitHub repository and writing ``make
+write.paper'' in the command line will reproduce our analysis. Workflow
+tools make it possible to trace the provenance of a summary statistic
+from the manuscript back to the raw data .
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Unfortunately, the raw data behind a result is }\DIFdelend \DIFaddbegin \DIFadd{Too often the underlying raw sequencing data and associated data that
+contextualizes the sequencing data are }\DIFaddend often not accessible\DIFdelbegin \DIFdel{,
+which }\DIFdelend \DIFaddbegin \DIFadd{. Clearly,
+this }\DIFaddend makes reproducing a prior analysis impossible (19, 20).
+Well-established databases for storing a variety of ``omics'' data exist
+and other data should be archived in third-party databases such as
+FigShare (https://figshare.com) and Dryad (https://datadryad.org).
+However, \DIFaddbegin \DIFadd{some }\DIFaddend researchers still fail to post their sequencing data to
+public databases or do not provide the necessary metadata with the
+sequencing data. As we developed the obesity meta-analysis we were
+dependent on the original authors to provide the information for two of
+the ten datasets. Furthermore, the data made available from the original
+study only provided the subjects' body mass index (BMI) as categories
+(\DIFdelbegin \DIFdel{14}\DIFdelend \DIFaddbegin \DIFadd{15}\DIFaddend ). We were unable to access the actual heights, weights, and BMIs. We
+did not include three large datasets from two studies because their data
+were inaccessible due to onerous data sharing agreements (21, 22). Two
+other datasets required at least a month of effort to obtain (23, 24).
+\DIFaddbegin \DIFadd{More broadly, Stodden et al. (25) recently showed that although
+}\emph{\DIFadd{Science}} \DIFadd{magazine has had clear guidelines requiring authors to
+make the data and code for their studies available, only 44\% of the
+authors who published papers in 2011 and 2012 were willing to provide
+the resources. Lack of access to the data and underlying code for an
+analysis clearly limits the ability of others to reproduce and build
+upon that analysis.
+}\DIFaddend 
+
+\DIFdelbegin \DIFdel{Rapid }\DIFdelend \DIFaddbegin \DIFadd{``Link rot'' - the fact that web or email addresses become deprecated -
+is a significant problem for those attempting to access the data and
+methods needed to reproduce a result (26). Changes in institutional
+affiliation frequently render email addresses invalid. ORCID
+(https://orcid.org) has emerged as a technology to solve the email rot
+problem and many journals use it to provide a persistent link to an
+individual's many scientific identities over their career. The fraction
+of manuscripts including web resources continues to grow and yet at
+least 70\% of those manuscripts include URLs that are inaccessible (26).
+To prevent link rot, services like Zotero (https://www.zotero.org) can
+provide a digital object identifier (DOI) that persists even if the link
+that it points to changes. Unfortunately, the developer of the web
+resources must ensure that the resource remains active. The
+inevitability of link rot further emphasizes the importance of using
+public and stable servers that are likely to persist.
+}
+
+\DIFadd{Related to link rot, rapid }\DIFaddend advances in sequencing technology, data
+curation, databases, and statistical techniques present an additional
+threat to reproducibility \DIFdelbegin \DIFdel{.
+}\DIFdelend \DIFaddbegin \DIFadd{because resources and what are considered best
+practices are constantly evolving. This evolution is not always well
+documented. }\DIFaddend For example, the \DIFdelbegin \DIFdel{Human Microbiome Project used Roche's 454 platform to
+sequence the 16S rRNA gene (23). This sequencing platform is no longer
+commercially available. Data analysis software and databases are also
+rapidly changing. The }\DIFdelend mothur software package has had 40 major
+updates since it was originally released in 2009 (\DIFdelbegin \DIFdel{25}\DIFdelend \DIFaddbegin \DIFadd{27}\DIFaddend ). The RDP {[}(\DIFdelbegin \DIFdel{26}\DIFdelend \DIFaddbegin \DIFadd{28}\DIFaddend );
+http://rdp.cme.msu.edu{]} and SILVA {[}(\DIFdelbegin \DIFdel{27}\DIFdelend \DIFaddbegin \DIFadd{29}\DIFaddend ); https://www.arb-silva.de{]}
+databases that many use as a reference for aligning and classifying 16S
+rRNA gene sequences are updated annually and the popular greengenes
+database files have not been updated since 2013 {[}(\DIFdelbegin \DIFdel{28}\DIFdelend \DIFaddbegin \DIFadd{30}\DIFaddend );
+http://greengenes.lbl.gov and http://greengenes.secondgenome.com{]}.
+With each release, curators expand the number of sequences in the
+database and make modifications to their taxonomic outline. For software
+and databases, it is critical that authors report version numbers if
+there is to be any hope of replicating previous work. Unfortunately, the
+reliance on web-based \DIFdelbegin \DIFdel{workflows like }\DIFdelend \DIFaddbegin \DIFadd{resources and workflows at sites such as }\DIFaddend GenBank
+(https://www.ncbi.nlm.nih.gov/genbank), greengenes, RDP, and SILVA
+preclude analyzing new data with older versions of the sites. The
+greengenes website removed their online tools in April 2017,
+exemplifying the problem with web-based workflows. Their database files
+are now available through the company, Second Genome, but their tools
+are not. \DIFaddbegin \DIFadd{Combined with the development of new sequencing platforms and
+deprecation of old platforms, these changes in technology, references,
+and software underscore the importance of adequately documenting
+workflows and enabling users to recreate the conditions that the
+original researchers worked within.
+}\DIFaddend 
+
+\DIFdelbegin \DIFdel{``Link rot'' - the fact that web or email addresses become deprecated -
+is a significant problem for those attempting to access the data and methods needed to reproduce a result (29). Changes in institutional
+affiliation frequently render email addresses invalid.ORCID
+}\DIFdelend \DIFaddbegin \DIFadd{Because many journals impose word limits on manuscripts, Materials and
+Methods sections become a chain of citations to previous work that each
+cite previous work (11). Improved documentation in supplementary
+materials or archives such as protocols.io }\DIFaddend (https://\DIFdelbegin \DIFdel{orcid.org)
+has emerged as a technology to solve the email rot
+problem and many journals use it to provide a persistent link to an
+individual's many scientific identities over their career. The fraction
+of manuscripts including web resources continues to grow and yet at
+least 70\% of those manuscripts include URLs that are inaccessible (29).
+To prevent link rot, services like Zotero }\DIFdelend \DIFaddbegin \DIFadd{www.protocols.io)
+for lab-based methods or through GitHub (https://github.com) for data
+analysis workflows would make it easier for researchers to avoid these
+rabbit holes. For data analysis workflows, software such as GNU Make
+}\DIFaddend (https://www.\DIFdelbegin \DIFdel{zotero.org) can
+provide a digital object identifier (DOI) that persists even if the link
+that it points to changes. Unfortunately, the developer of the web
+resources must insure that the resource remains active. The
+inevitability of link rot further emphasizes the
+importance of using
+public and stable servers that are likely to persist for at least a decade}\DIFdelend \DIFaddbegin \DIFadd{gnu.org/software/make/) and the Common Workflow Language
+(31) make it possible to track data dependencies and automate a
+workflow. For example, we used GNU Make to write a workflow in our
+meta-analysis of the obesity data, such that downloading a copy of the
+scripts from the project's GitHub repository and writing ``make
+write.paper'' in the command line will reproduce our analysis. Although
+considerable effort is required to make them work, workflow tools make
+it possible to trace the provenance of a summary statistic from the
+manuscript back to the raw data}\DIFaddend .
+
+\DIFdelbegin \DIFdel{Other problems with reproducibility }\DIFdelend \DIFaddbegin \DIFadd{The use of workflow tools, literate programming tools (e.g.~RMarkdown
+(32) and Jupyter (33)), and version control software provide researchers
+with mechanisms to track the development of their analyses. Furthermore,
+these tools can help researchers }\DIFaddend reflect the fact that \DIFdelbegin \DIFdel{science is }\DIFdelend \DIFaddbegin \DIFadd{their analysis
+was }\DIFaddend not a linear process resembling a pipeline. In reality, questions
+change and scientists \DIFaddbegin \DIFadd{can }\DIFaddend fall into the traps of the ``Garden of Many
+Forking Paths'' where they go looking for a desired result (\DIFdelbegin \DIFdel{30}\DIFdelend \DIFaddbegin \DIFadd{34}\DIFaddend ) or
+``P-hacking'' where large numbers of statistical hypothesis tests are
+attempted without adequately correcting for performing multiple tests
+(\DIFdelbegin \DIFdel{31}\DIFdelend \DIFaddbegin \DIFadd{35}\DIFaddend ). Although it is possible to pre-register data analysis plans
+(\DIFdelbegin \DIFdel{32--34}\DIFdelend \DIFaddbegin \DIFadd{36--38}\DIFaddend ), these plans are often too stringent for most exploratory
+research. \DIFdelbegin \DIFdel{Alternatives include
+making research notebooks publicly available using
+commercial platforms
+or free tools such as RMarkdown documents (35) and Jupyter notebooks
+(36). Combined with version control software such as git, these literate programmingdocuments can allow researchers to document
+and share the
+evolution of their analyses}\DIFdelend \DIFaddbegin \DIFadd{An increasing number of microbiome researchers are using
+workflow, literate programming, and version control tools to document
+their analyses. I have yet to observe widespread exploration of the
+history of projects' repositories or the adoption of pre-registration of
+data analysis plans among microbiome researchers. Although these have
+their technical and cultural limitations, they offer greater
+transparency to improved reproducibility}\DIFaddend .
+
+\textbf{Replicability.} A number of threats similar to those for
+reproducibility could explain why a previous result cannot be
+replicated. In addition to those detailed previously, there are threats
+related to differences in systems or populations and the ability to
+control for those differences.
+
+\DIFdelbegin \DIFdel{Problems with }\DIFdelend \DIFaddbegin \DIFadd{Forgotten in discussions of replication failures by many microbiologists
+is that a replication may fail because replication is statistical rather
+than deterministic (6). Every experiment has a margin of error and when
+the effect size is near that margin of error, it is likely that a
+statistically significant result in one replicate will not be
+significant in another. Most researchers use a frequentist null model
+hypothesis testing approach with which they are willing to accept a Type
+I error of 0.05. Stated more colloquially, they are willing to
+incorrectly reject a null hypothesis in 5\% of the replicates. Further,
+they rarely quantify the risk of falsely accepting a null hypothesis
+(i.e.~Type II errors) (39). In some cases, an insufficient sample size
+in the replicate study may explain the failure to replicate a study. In
+other cases, the original study may have been underpowered, rendering it
+susceptible to an inflated risk of Type I errors (40). Solutions to
+these problems include pre-registering data analysis plans (36--38),
+justifying sample sizes based on power calculations (11, 12, 39), and
+using Bayesian frameworks that allow prior knowledge of the system to
+influence the interpretation of new results (41, 42). It needs to be
+underscored, however, that to measure statistical power and use that
+information to inform sample size selections one must know what a
+biologically relevant difference is. The microbiome field has yet to
+make that determination. Our previous power analysis used varying
+differences in Shannon diversity (12). As we indicated, those levels
+were picked because they seemed reasonable, not because of a biological
+foundation. Furthermore, there was no reason to think that diversity
+metrics are the most biologically meaningful parameters to base the
+calculations on.
+}
+
+\DIFadd{Beyond problems of sample size and statistical power calculations,
+problems with }\DIFaddend experimental design are \DIFaddbegin \DIFadd{also }\DIFaddend often a threat to
+replicability because investigators fail to account for confounding
+variables in the original study. \DIFaddbegin \DIFadd{A subsequent study may fail to find the
+same result because their design is not impacted by the confounding
+variable. }\DIFaddend In sequence-based analyses, threats to replicability are
+encountered when samples are not randomized across sequencing runs.
+These so-called batch effects have been a problem with a large number of
+analytical techniques beyond sequencing (\DIFdelbegin \DIFdel{37}\DIFdelend \DIFaddbegin \DIFadd{43}\DIFaddend ). One notable example
+occurred within the Human Microbiome Project where 150 people were
+recruited in Houston, TX and 150 in St.~Louis, MO (23). Researchers at
+the Baylor College of Medicine and Washington University performed the
+DNA extractions for the two sets of subjects, respectively. Researchers
+at the Baylor College of Medicine, the J. Craig Venter Institute, and
+the Broad Institute sequenced the DNA from the Houston subjects and
+researchers from Washington University sequenced the DNA from the
+St.~Louis \DIFdelbegin \DIFdel{subject}\DIFdelend \DIFaddbegin \DIFadd{subjects}\DIFaddend . The subject's city was the variable with the largest
+effect size, although all parties used the same standard operating
+procedures to sample the subjects and extract and sequence the DNA (23,
+\DIFdelbegin \DIFdel{38}\DIFdelend \DIFaddbegin \DIFadd{44}\DIFaddend ). Because the city of origin and the center that did the extractions
+were perfectly confounded, it was impossible to quantify the impact of
+geographic differences on the microbiome. Instead of being a single
+study that intended to address associations between geographical and
+microbiome variation, this became two replicate studies that were unable
+address the influence that geography has on the microbiome. \DIFaddbegin \DIFadd{It is easy
+to blame the those that designed the study for this confounding, but it
+is important to acknowledge the social conditions that were resolved via
+negotiations that may have impacted the design and the need to garner
+buy in from different centers.
+}\DIFaddend 
+
+In addition to variation between human cohorts, variation between
+bacterial and model organism strains can hinder efforts to replicate
+results. In microbiome research, it is widely appreciated that the
+microbiota of research animals from the same litter and breeding
+facility are largely clonal and distinct from other facilities (\DIFdelbegin \DIFdel{16, 39}\DIFdelend \DIFaddbegin \DIFadd{17, 45}\DIFaddend ).
+Mice from two breeding facilities at the same institution may have
+completely different microbiota. The best example of this phenomenon is
+the presence of segmented filamentous bacteria in mice purchased from
+Taconic Farms, but not Jackson Laboratories (\DIFdelbegin \DIFdel{40, 41}\DIFdelend \DIFaddbegin \DIFadd{46, 47}\DIFaddend ). Thus, the origin
+of the mice and not the experimental treatment may explain the roles
+ascribed to the microbiota. This is particularly a problem for genetic
+models when researchers obtain mutant animals and animals with the wild
+type background as their control. In such cases using the offspring of
+heterozygous matings is critical (\DIFdelbegin \DIFdel{42}\DIFdelend \DIFaddbegin \DIFadd{48}\DIFaddend ). Similarly, comparing the
+microbiota of obese and lean individuals from a cohort of twins and
+their mothers in Missouri (\DIFdelbegin \DIFdel{14}\DIFdelend \DIFaddbegin \DIFadd{15}\DIFaddend ) may have confounding factors that differ
+from members of Amish communities (24). In these cases, the problem with
+replicability is not due to the quality of the investigator's
+experimental practices, but to the differences that may be biological,
+demographic, or anthropological. Thus failure to replicate a study
+across different strains or cohorts could suggest that other interesting
+factors play a role in the phenomenon under study.
+
+\DIFdelbegin \DIFdel{Uncertain }\DIFdelend \DIFaddbegin \DIFadd{Just as uncertainty over the variation in mouse and human populations
+can impact the replicability of results, uncertain }\DIFaddend provenance and purity
+of reagents, organisms, and samples \DIFaddbegin \DIFadd{can }\DIFaddend also threaten replicability.
+Perhaps the best-known example is the discovery that HeLa cells
+contaminate many other cell lines, especially those in the same
+laboratory (\DIFdelbegin \DIFdel{43, 44}\DIFdelend \DIFaddbegin \DIFadd{49, 50}\DIFaddend ). Similarly, investigators frequently realize that
+they are working with bacterial strains that were incorrectly typed or
+that have evolved during serial passages from the freezer stock (\DIFdelbegin \DIFdel{45,
+46}\DIFdelend \DIFaddbegin \DIFadd{51,
+52}\DIFaddend ). Short of resequencing the cells, experimental controls, limiting
+the number of passages from freezer stocks, and periodic phenotyping of
+the strains can help to overcome these problems. \DIFdelbegin \DIFdel{In the microbiome literature, there is a }\DIFdelend \DIFaddbegin \DIFadd{However, it is part of
+our scientific culture that if a colleague sends a strain to another
+researcher, the recipient generally trusts that they get the correct
+strain. There is also a }\DIFaddend growing awareness that DNA extraction kits can
+be contaminated with low levels of bacterial DNA (\DIFdelbegin \DIFdel{47}\DIFdelend \DIFaddbegin \DIFadd{53}\DIFaddend ). These
+contaminants have led to the identification of contaminants as being
+important members of the lung and placental microbiota when mock
+extractions are not sequenced in parallel (\DIFdelbegin \DIFdel{48--50). }%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Forgotten in discussions of replication failures is that a replication
+may fail because replication is statistical rather than deterministic
+(6). Every experiment has a margin of error and when the effect size is
+near that margin of error, it is likely that a statistically significant
+result in one replicate will not be significant in another. Most
+researchers use a frequentist null model hypothesis testing approach
+with which they are willing to accept a Type I error of 0.05. Stated
+more colloquially, they are willing to incorrectly reject a null
+hypothesis in 5\% of the replicates. Further, they rarely quantify the
+risk of falsely accepting a null hypothesis (i.e.~Type II errors) (51).
+In our analysis of the microbiota associated with human obesity, we
+observed that nearly all studies were underpowered to detect 5 or 10\%
+differences in diversity (11). In some cases, an insufficient sample
+size in the replicate study may explain the failure to replicate a
+study. In other cases, the original study may have been underpowered,
+rendering it susceptible to an inflated risk of Type I errors (52).
+Solutions to these problems include pre-registering data analysis plans
+(32--34), justifying sample sizes based on power calculations (10}\DIFdelend \DIFaddbegin \DIFadd{54--56). For each of these
+threats to replication}\DIFaddend , \DIFdelbegin \DIFdel{11,
+51), and using Bayesian frameworks that allow prior knowledge of the system to influence the interpretation of new results(53, 54)}\DIFdelend \DIFaddbegin \DIFadd{we would be well served by following the proverb
+to ``trust, but verify'' by testing the robustness of the results}\DIFaddend .
+
+\textbf{Robustness.} Every method has its own strengths and weaknesses.
+Therefore, it is important to address a research question from multiple
+and hopefully orthogonal directions. This strategy combines the
+strengths of different methods to overcome their individual weaknesses
+(\DIFdelbegin \DIFdel{55}\DIFdelend \DIFaddbegin \DIFadd{57}\DIFaddend ). Evaluating the robustness of a result from a single cohort is
+becoming more common as researchers pursue multiple approaches including
+16S rRNA gene sequencing, metagenomics, metatranscriptomics, and
+metabolomics (\DIFdelbegin \DIFdel{56--58}\DIFdelend \DIFaddbegin \DIFadd{58--60}\DIFaddend ). Of course, biases in the underlying cohort
+design, sample collection and storage, or the nucleic acid processing
+will propagate through the analyses. The way to remedy this is to select
+methods that are as independent from each other as possible. For
+example, data collected from multiple regions of the 16S rRNA gene would
+not be considered truly independent datasets since amplicon sequencing
+would have been applied to the same samples. The results would be
+marginally more independent if one were to layer shotgun metagenomic
+data onto the 16S rRNA gene sequence data because although the same DNA
+would be used for sequencing, metagenomics provides information about
+the genetic diversity and functional potential of a community rather
+than the taxonomic diversity of a community. Metabolomic data would be
+even more independent from the DNA-based methods since it requires
+completely different sample \DIFdelbegin \DIFdel{handling and }\DIFdelend processing steps. Quantitative PCR,
+cultivation, and microscopy could be similarly layered on these data.
+Ultimately, it is impossible for the results of each set of methods to
+be fully independent. \DIFaddbegin \DIFadd{If the underlying design of the study is flawed by
+insufficient statistical power or failure to account for confounding
+variables, then any attempts to test the robustness of a result will
+also be flawed.
+}
+
+\textbf{\DIFadd{Generalizability.}} \DIFadd{A motivating goal in science is to have a
+result that is generalizable across populations or systems. }\DIFaddend Within a
+scientific culture that does not place value on publishing negative
+results\DIFaddbegin \DIFadd{, }\DIFaddend it is difficult to assess whether scientists' bias to support
+their prior results affects the ability to claim that a result is robust
+or generalizable. \DIFdelbegin %DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\textbf{\DIFdel{Generalizability.}} %DIFAUXCMD
+\DIFdel{The gold standard of science is to have a
+result that is generalizable across populations. Failing to }\DIFdelend \DIFaddbegin \DIFadd{Similarly, failing to }\DIFaddend attempt replication studies
+hinders the ability of researchers to test the generalizability of most
+results. Scientists often fear being ``scooped'' (\DIFdelbegin \DIFdel{59}\DIFdelend \DIFaddbegin \DIFadd{61}\DIFaddend ). In reality, it is
+the second researcher who examines the same question that has the
+opportunity to increase the field's confidence that a result is valid
+(\DIFdelbegin \DIFdel{60}\DIFdelend \DIFaddbegin \DIFadd{62}\DIFaddend ). Generalizability is an important and broad question. Model
+organisms (e.g. \emph{E. coli}) and strains of those organisms
+(e.g.~K-12) have taught us a great deal about the biology of those
+organisms. However, it is not always trivial to generalize that
+knowledge to related species and strains or from \emph{in vitro} to
+\emph{in vivo} conditions and on to human subjects (\DIFdelbegin \DIFdel{61, 62}\DIFdelend \DIFaddbegin \DIFadd{63, 64}\DIFaddend ). Like a
+failure to reproduce, replicate, or demonstrate the robustness of a
+result, a failure to generalize a result is not a failure of science.
+Rather, it is an opportunity to better understand the complex biology of
+bacteria and how they interact with their environments.
+
+\subsection{Fostering a culture of greater reproducibility and
+replicability}\label{fostering-a-culture-of-greater-reproducibility-and-replicability}
+
+\textbf{Training.} \DIFaddbegin \DIFadd{Throughout my discussion of the threats to
+reproducibility, replicability, robustness, and generalizability
+failures on the part of scientists to be more transparent, provide
+greater documentation, or design better experiments have been balanced
+by an appreciation that we work within a scientific culture. This
+culture is limited by our ignorance of biology, rapid expansion in
+technology, misaligned rewards, and a lack of necessary training. }\DIFaddend A key
+observation from the work of Garijo and colleagues (3) was that the
+level of detail needed to reproduce an analysis varies depending on the
+researcher's level of training. An expert in the field understands the
+nuances and standards of the field whereas a novice may not know how to
+install the software. This highlights the need for training. Yet, many
+microbiology training programs focus on laboratory skills while ignoring
+data analysis skills. A number of excellent ``best practices'' documents
+have emerged in recent years (\DIFdelbegin \DIFdel{63--68). I have created the Riffomonas project, which
+expounds on the threats to reproducibility and tools that
+microbiologists can use to maximize the computational reproducibility of
+their analyses (http://www.riffomonas.org). }\DIFdelend \DIFaddbegin \DIFadd{65--70). }\DIFaddend In addition, organizations
+including Software Carpentry and Data Carpentry offer workshops to
+introduce researchers to the best practices in reproducible research
+(\DIFdelbegin \DIFdel{69) . }\DIFdelend \DIFaddbegin \DIFadd{71) (https://carpentries.org). }\DIFaddend Massively open online courses have been
+developed that teach scientists best practices for performing
+reproducible analyses. The most popular of these is a training program
+from faculty at the Johns Hopkins Data Science Lab
+(http://jhudatascience.org). Just as important as learning the
+fundamentals of how to implement reproducible research methods is honing
+those skills in one's research. A novice could not reproduce Beethoven's
+``Für Elise'' from sheet music without prior experience playing the
+piano. Similarly, novices cannot expect to reproduce a result without
+learning the methods of their discipline. \DIFaddbegin \DIFadd{With this analogy in mind, I
+have created the Riffomonas project, which expounds on the threats to
+reproducibility and tools that microbiome researchers can use to
+maximize the computational reproducibility of their analyses
+(http://www.riffomonas.org). The Riffomonas materials use
+microbiome-related examples to illustrate the importance of
+transparency, documentation, automated workflows, version control, and
+literate programming to improving the computational reproducibility of
+an analysis. The goal is that once scientists have been trained in these
+practices they can apply them to their own work and use them to ``riff''
+or adapt and build on the work of others.
+}\DIFaddend 
+
+\textbf{Exercises.} The following exercises are meant to motivate
+conversations within a research group to foster a culture improving
+reproducibility and replicability and to underscore the threats outlined
+above.
+
+1. Working away from each other, have two or more people to write
+instructions on how to fold a paper airplane. Have the participants
+trade instructions, separate, and implement the instructions. \DIFaddbegin \DIFadd{After the
+participants come back together ask: }\DIFaddend How closely did the final airplanes
+resemble that of the person who developed the instructions? What would
+have helped to make the reproductions more faithful? How much did the
+author of the instructions assume about the other person's prior
+knowledge of paper airplanes, resources, and abilities were assumed?
+What challenges would length limitations place on this exercise? How
+does this exercise resemble the descriptions in the Materials and
+Methods section of papers for standard methods (e.g.~PCR) and for novel
+methods (e.g.~bioinformatic workflows)?
+
+2. Imagine a graduate student is really excited about an analysis that
+you performed in your most recent paper and would like to replicate the
+analysis with their own data. But first, they want to make sure that
+they reproduce your results. What steps are likely to cause the student
+problems? \DIFdelbegin \DIFdel{Find }\DIFdelend \DIFaddbegin \DIFadd{If it is not clear to you what problems they might face, find
+}\DIFaddend your favorite figure from \DIFdelbegin \DIFdel{your favorite paper from }\DIFdelend \DIFaddbegin \DIFadd{a paper by }\DIFaddend a different research group \DIFaddbegin \DIFadd{than
+your own}\DIFaddend . Can you reproduce the figure? What is standing in your way?
+
+3. Take a figure from your recent paper and improve the likelihood that
+another researcher would be able to reproduce it. Where are the data and
+how would the researcher access them? What calculations were performed
+to summarize the data? What software was used to generate the figure? Is
+that software freely available? What steps would the researcher need to
+take to generate the figure? When you write your methods, what
+experience level are you writing for? Who should you be writing for?
+When you are confident that you have made the figure as reproducible as
+you can, give the instructions to several colleagues and ask for their
+feedback.
+
+4. Complete an audit of the reproducibility practices in your research
+group. Table 2 provides a rubric that someone working within the
+host-associated microbiome field might use to assess their research.
+Within your research group, modify this rubric to suit your needs. For
+your next paper, work to improve one element from the rubric and
+constantly be developing an ethic of fostering greater reproducibility.
+
+5. Many of the threats to reproducibility and replicability are a
+product of scientific culture: methods sections are terse or vague,
+original data are not available, analyses rely on expensive and
+proprietary software, analysis scripts are available ``upon request from
+the authors'', papers are published behind pay-walls. Some might give
+into despair thinking that one person or research group can only have a
+minor impact. Have a discussion within your group about why things are
+this way, whether your group's practices should change, and what would
+be the easiest and most impactful thing to change.
+
+\subsection{Conclusion}\label{conclusion}
+
+A motivating concept \DIFdelbegin \DIFdel{to }\DIFdelend \DIFaddbegin \DIFadd{that has been attributed to many people to }\DIFaddend improve
+the reproducibility of one's research is that \DIFdelbegin \DIFdel{the }\DIFdelend \DIFaddbegin \DIFadd{they should think of
+themselves from a month ago as their }\DIFaddend most important collaborator\DIFdelbegin \DIFdel{is themselves six months ago, and
+old them does not have email access. Their }\DIFdelend \DIFaddbegin \DIFadd{. They
+are not available to answer questions to things that they have forgotten
+in the intervening period. This is a common occurrence for many
+researchers who put projects to the side for a time to prepare for
+examinations, go on vacations, or work on other projects. Trying to
+piece together what they did previously is often a frustrating process.
+If instead they had been using tools to improve reproducibility, then
+they will be doing themselves a favor when they return to the project.
+Similarly, I consider their supervisor or co-authors to be their }\DIFaddend second
+most important \DIFdelbegin \DIFdel{collaborator is the director of their research group.
+}\DIFdelend \DIFaddbegin \DIFadd{collaborators. It is likely that the corresponding author
+was not the person that implemented the details of the analysis plan.
+Thus, it is important that they have access and the ability to navigate
+the project when they receive a query about how the analysis was done.
+}\DIFaddend Anyone that has done research can attest to how difficult it can be to
+\DIFdelbegin \DIFdel{satisfying their
+two most important }\DIFdelend \DIFaddbegin \DIFadd{satisfy these two sets of }\DIFaddend ``collaborators''. And yet, if can satisfy
+these collaborators, then we should be able to satisfy the third
+collaborator, the reader who hopes to build upon our work to generalize
+it or go in a new direction.
+
+It is important to see that attempts to guard against threats to
+reproducibility, replicability, robustness, and generalizability are
+positive forces that will improve science. They have been considered a
+form of scientific ``preventative medicine'' (\DIFdelbegin \DIFdel{7}\DIFdelend \DIFaddbegin \DIFadd{8}\DIFaddend ). Although guarding
+against these threats is not a guarantee that the correct conclusion
+will be reached, the likelihood that the result is correct will be
+increased. \DIFaddbegin \DIFadd{Beyond ensuring ``correctness'' the goal of these efforts,
+and I would argue their primary goal, should be to enable future
+scientists to build upon the work to go further. }\DIFaddend Before attributing
+difficulties with reproducibility, replicability, robustness, and
+generalizability to a dim view of our fellow scientists as being sloppy,
+biased, or untrustworthy, it is worth seriously considering the many
+factors - biological, statistical, and sociological - that pose a
+threat. Although there is much room for improvement, we must acknowledge
+that science is a process of learning and that it is really f\#\$\%ing
+hard.
+
+\subsection{Acknowledgements}\label{acknowledgements}
+
+This work was supported in part by funding from the National Institutes
+of Health (5R25GM116149). I am grateful to Ada Hagan for providing
+comments on an early version of the manuscript and Kate Epstein for
+assisting me with language editing.
+
+\newpage
+
+\textbf{\emph{Table 1.}} Simple grid-based system for defining concepts
+that can be used to describe the validity of a result. This is a
+generalization of the approach used by Whitaker (\DIFdelbegin \DIFdel{9}\DIFdelend \DIFaddbegin \DIFadd{10}\DIFaddend ) who used it to
+describe computational analyses.
+
+\vspace{1cm}
+
+\begin{center}
+    \begin{tabular}{ | c | c | c |}
+    \hline
+        & \textbf{Same Experimental System} & \textbf{Different Experimental System} \\ \hline
+        \textbf{Same Methods} & Reproducibility & Replicability \\ \hline
+        \textbf{Different Methods} & Robustness & Generalizability \\
+    \hline
+    \end{tabular}
+\end{center}
+
+\newpage
+
+\textbf{\emph{Table 2.}} An aspirational rubric for evaluating the
+practices host-associated microbiome researchers might use to increase
+the reproducibility and replicability of their work. Although many of
+the questions can be thought of as having a yes or no answer, a better
+approach would be to see the questions as being open ended with the real
+question being, ``What can \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend do to improve the status of \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend project on
+this point?''. With this in mind, a researcher is unlikely to have a
+project that satisfies the ``Best'' column for each line of the table.
+Researchers are encouraged to adapt the categories to modify the
+categories to suit their own needs.
+
+\begin{center}
+    \scriptsize\setstretch{0.9}
+    \renewcommand{\arraystretch}{1.8}
+  \begin{tabular}{ | P{3cm} | P{4cm} | P{4cm} | P{4cm} |}
+  \hline
+    \textbf{Practice} & \textbf{Good} & \textbf{Better} & \textbf{Best} \\ \hline
+    Handling of confounding variables
+    & Prior to generating data, did \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend identify a list of possible confounding variables - biological and technical - that may obscure the interpretation of \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend results?
+    & Do \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend indicate the level of randomization and experimental blocking that \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend performed to minimize the effect of the confounding variables (i.e. batch effects)?
+    & Does the interpretation of \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend results limit itself to only those variables that are not obviously confounded? \\ \hline
+
+    Sex\DIFaddbegin \DIFadd{/gender }\DIFaddend as confounding variables
+    & Do \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend indicate the sex\DIFaddbegin \DIFadd{/gender }\DIFaddend of research animals\DIFdelbegin \DIFdel{and }\DIFdelend \DIFaddbegin \DIFadd{/}\DIFaddend participants?
+    & Do \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend provide a justification for the lack of even representation?
+    & Do \DIFdelbegin \DIFdel{I have even representation of male and females in my }\DIFdelend \DIFaddbegin \DIFadd{we have an equitable representation of sexes/genders in our }\DIFaddend studies? Do \DIFdelbegin \DIFdel{I account for sex }\DIFdelend \DIFaddbegin \DIFadd{we account for them }\DIFaddend as a variable? \\ \hline
+
+    Experimental design considerations
+    & Do \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend have an active collaboration with a statistician who helps with experimental design and analysis?
+    & Do \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend indicate the number of hypothesis tests \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend performed and have \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend corrected any P-values for multiple comparisons?
+    & For \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend primary research questions, have \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend run a power analysis to determine the necessary sample size? \\ \hline
+
+    Data analysis plan
+    & Before starting an analysis, have \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend articulated a set of primary and secondary research questions
+    & Has someone else reviewed \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend data analysis plan prior to analyzing the data?
+    & Have \DIFdelbegin \DIFdel{I registered my }\DIFdelend \DIFaddbegin \DIFadd{we registered our }\DIFaddend data analysis plan with a third party before starting the project? \\ \hline
+
+    Provenance of reagents
+    & \DIFdelbegin \DIFdel{Do I include }\DIFdelend \DIFaddbegin \DIFadd{Is there }\DIFaddend a table of \DIFdelbegin \DIFdel{the }\DIFdelend \DIFaddbegin \DIFadd{reagents such as }\DIFaddend cell lines, strains, \DIFdelbegin \DIFdel{genotypes, }\DIFdelend and primer sequences that \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{were }\DIFaddend used?
+    & Where possible, have \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend obtained reagents from certified entities like the American Type Culture Collection (ATCC)?
+    & Is there a statement indicating how \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend know the provenance and purity of each cell line and strain? \\ \hline
+
+    Controlling for initial microbiota
+    & Are mice obtained from a breeding facility that allows me to track their pedigree?
+    & Where possible, are mice from different treatment groups co-housed to control for differences in initial microbiota?
+    & Are comparisons between mice with different genotypes made using mice that are the result of matings between animals that are heterozygous for that genotype? \\ \hline
+
+    Clarity of software descriptions
+    & Are all methods, databases, and software tools cited? Do \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend follow the relevant licensing requirements of each tool?
+    & Do \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend indicate dates and version numbers of websites that were used to obtain data, code, and other third party resources?
+    & Are detailed methods registered on a website like protocols.io or GitHub? \\ \hline
+
+    DNA contamination
+    & Did \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend quantify the background DNA concentration in \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend reagents? Did \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend sequence an extraction control?
+    & \DIFdelbegin \DIFdel{Am I }\DIFdelend \DIFaddbegin \DIFadd{Are we }\DIFaddend taking steps to minimize reagent contamination?
+    & What methods do \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend take to confirm a result that a sequencing result may be clouded by contaminating DNA? \\ \hline
+
+    Availability of data products
+    & Is all of the raw data publicly available?
+    & Are intermediate and final data files publicly available?
+    & Are tools like Amazon Machine Images (AMIs) used to make a snapshot of \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend working directory? \\ \hline
+
+    Availability of metadata
+    & Are all of the metadata necessary to repeat any analyses \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend performed publicly available?
+    & Have \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend adhered to standards in releasing the minimal amount of metadata about \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend samples?
+    & Did \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend go beyond the minimum to incorporate other pieces of metadata that will inform future studies? \\ \hline
+
+    Data analysis organization
+    & Are all data, code, results, and documentation housed within a monophyletic folder structure on \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend computer?
+    & Is this project contained within a single directory on \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend computer and does it separate \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend raw and processed data, code, documentation, and results?
+    & Is this folder structure under version control? Is the project's repository publicly available? Are there assurances that this repository will remain accessible? \\ \hline
+
+    Availability of data analysis tools
+    & Are free \DIFaddbegin \DIFadd{and open }\DIFaddend tools used in preference to proprietary commercial tools?
+    & Is the computer code required to run analyses available through a service like GitHub?
+    & Are Amazon Machine Images or Docker containers used to allow recreation of \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend work environment? \\ \hline
+
+    Documentation of data analysis workflow
+    & Is \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend code well documented? Do \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend use a self-commenting coding practice?
+    & Do each of \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend scripts have a header indicating the inputs, outputs, and dependencies? Is it documented how files relate to each other?
+    & Are automated workflow tools like GNU Make and CommonWL used to convert raw data into final tables, figures, and summary statistics? \\ \hline
+
+    Use of random number generator
+    & Do \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend know whether any of the steps in \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend data analysis workflow depend on the use of a random number generator?
+    & For analyses that utilize a random number generator, have \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend noted the underlying random seed?
+    & Have \DIFdelbegin \DIFdel{I repeated my }\DIFdelend \DIFaddbegin \DIFadd{we repeated our }\DIFaddend analysis with multiple seeds to show that the results are insensitive to the choice of the seed? \\ \hline
+
+    Defensive data analysis
+    & Is \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend data analysis pipeline flexible enough to add new data?
+    & Does \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend code include tests to confirm that it does what \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend think it does?
+    & Do \DIFdelbegin \DIFdel{I make }\DIFdelend \DIFaddbegin \DIFadd{we made }\DIFaddend use of automated tests and continuous integration tools to \DIFdelbegin \DIFdel{insure }\DIFdelend \DIFaddbegin \DIFadd{ensure }\DIFaddend internal reproducibility? \\ \hline
+
+    Insuring short and longterm reproducibility
+    & Did \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend release the underlying code and new data at the time of submitting a paper with their DOIs and accession numbers?
+    & Did \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend include a reproducibility statement or declaration at the end of the manuscript? Are ORCID identifiers provided for all authors?
+    & What mechanisms are in place to \DIFdelbegin \DIFdel{insure my }\DIFdelend \DIFaddbegin \DIFadd{ensure our }\DIFaddend analysis remains accessible and reproducible in 5 years? \\ \hline
+
+    Open science to foster reproducibility
+    & Have \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend released any embargoes on \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend code repository and raw data prior to submitting the manuscript?
+    & Did \DIFdelbegin \DIFdel{I }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend post a preprint version of \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend manuscript prior to submission?
+    & Have \DIFdelbegin \DIFdel{I  }\DIFdelend \DIFaddbegin \DIFadd{we }\DIFaddend published under a Creative Commons license? Is a permissive reuse license posted with \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend code \\ \hline
+
+    Transparency of data analysis
+    & Is it clear where one would go to find the data and processing steps behind any of \DIFdelbegin \DIFdel{my }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend figures?
+    & Are electronic notebooks publicly accessible and accompany the manuscript?
+    & Were literate programming tools used to generate summary statistics, tables, and figures directly from the data?
+     \\ \hline
+  \end{tabular}
+\end{center}
+
+\newpage
+
+\subsection*{References}\label{references}
+\addcontentsline{toc}{subsection}{References}
+
+\hypertarget{refs}{}
+\hypertarget{ref-Lane2015}{}
+1. \textbf{Lane N}. 2015. The unseen world: Reflections on leeuwenhoek
+(1677) Concerning little animals. Philosophical Transactions of the
+Royal Society B: Biological Sciences \textbf{370}:20140344--20140344.
+doi:\href{https://doi.org/10.1098/rstb.2014.0344}{10.1098/rstb.2014.0344}.
+
+\hypertarget{ref-Kinnings2010}{}
+2. \textbf{Kinnings SL}, \textbf{Xie L}, \textbf{Fung KH},
+\textbf{Jackson RM}, \textbf{Xie L}, \textbf{Bourne PE}. 2010. The
+mycobacterium tuberculosis drugome and its polypharmacological
+implications. PLoS Computational Biology \textbf{6}:e1000976.
+doi:\href{https://doi.org/10.1371/journal.pcbi.1000976}{10.1371/journal.pcbi.1000976}.
+
+\hypertarget{ref-Garijo2013}{}
+3. \textbf{Garijo D}, \textbf{Kinnings S}, \textbf{Xie L}, \textbf{Xie
+L}, \textbf{Zhang Y}, \textbf{Bourne PE}, \textbf{Gil Y}. 2013.
+Quantifying reproducibility in computational biology: The case of the
+tuberculosis drugome. PLOS ONE \textbf{8}:e80278.
+doi:\href{https://doi.org/10.1371/journal.pone.0080278}{10.1371/journal.pone.0080278}.
+
+\hypertarget{ref-Casadevall2016}{}
+4. \textbf{Casadevall A}, \textbf{Ellis LM}, \textbf{Davies EW},
+\textbf{McFall-Ngai M}, \textbf{Fang FC}. 2016. A framework for
+improving the quality of research in the biological sciences. mBio
+\textbf{7}:e01256--16.
+doi:\href{https://doi.org/10.1128/mbio.01256-16}{10.1128/mbio.01256-16}.
+
+\hypertarget{ref-Davies2016}{}
+5. \textbf{Davies EW}, \textbf{Edwards DD}, \textbf{Casadevall A},
+\textbf{Ellis LM}, \textbf{Fang FC}, \textbf{McFall-Ngai M}. 2016.
+Promoting responsible scientific research. American Society for
+Microbiology. http://www.asmscience.org/content/colloquia.54.
+
+\hypertarget{ref-Patil2016}{}
+6. \textbf{Patil P}, \textbf{Peng RD}, \textbf{Leek JT}. 2016. What
+should researchers expect when they replicate studies? A statistical
+view of replicability in psychological science. Perspectives on
+Psychological Science \textbf{11}:539--544.
+doi:\href{https://doi.org/10.1177/1745691616646366}{10.1177/1745691616646366}.
+
+\DIFdelbegin %DIFDELCMD < \hypertarget{ref-Leek2015}{}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \hypertarget{ref-Casadevall2010}{}
+\DIFaddend 7. \DIFaddbegin \textbf{\DIFadd{Casadevall A}}\DIFadd{, }\textbf{\DIFadd{Fang FC}}\DIFadd{. 2010. Reproducible science.
+Infection and Immunity }\textbf{\DIFadd{78}}\DIFadd{:4972--4975.
+doi:}\href{https://doi.org/10.1128/iai.00908-10}{10.1128/iai.00908-10}\DIFadd{.
+}
+
+\hypertarget{ref-Leek2015}{}
+\DIFadd{8. }\DIFaddend \textbf{Leek JT}, \textbf{Peng RD}. 2015. Reproducible research can
+still be wrong: Adopting a prevention approach. Proceedings of the
+National Academy of Sciences \textbf{112}:1645--1646.
+doi:\href{https://doi.org/10.1073/pnas.1421412111}{10.1073/pnas.1421412111}.
+
+\hypertarget{ref-Goodman2016}{}
+\DIFdelbegin \DIFdel{8. }\DIFdelend \DIFaddbegin \DIFadd{9. }\DIFaddend \textbf{Goodman SN}, \textbf{Fanelli D}, \textbf{Ioannidis JPA}.
+2016. What does research reproducibility mean? Science Translational
+Medicine \textbf{8}:341ps12--341ps12.
+doi:\href{https://doi.org/10.1126/scitranslmed.aaf5027}{10.1126/scitranslmed.aaf5027}.
+
+\hypertarget{ref-Whitaker2017}{}
+\DIFdelbegin \DIFdel{9. }\DIFdelend \DIFaddbegin \DIFadd{10. }\DIFaddend \textbf{Whitaker K}. 2017. Publishing a reproducible paper.
+doi:\href{https://doi.org/10.6084/m9.figshare.5440621.v2}{10.6084/m9.figshare.5440621.v2}.
+
+\hypertarget{ref-Collins2014}{}
+\DIFdelbegin \DIFdel{10. }\DIFdelend \DIFaddbegin \DIFadd{11. }\DIFaddend \textbf{Collins FS}, \textbf{Tabak LA}. 2014. NIH plans to enhance
+reproducibility. Nature \textbf{505}:612--613.
+doi:\href{https://doi.org/10.1038/505612a}{10.1038/505612a}.
+
+\hypertarget{ref-Sze2016}{}
+\DIFdelbegin \DIFdel{11. }\DIFdelend \DIFaddbegin \DIFadd{12. }\DIFaddend \textbf{Sze MA}, \textbf{Schloss PD}. 2016. Looking for a signal in
+the noise: Revisiting obesity and the microbiome. mBio
+\textbf{7}:e01018--16.
+doi:\href{https://doi.org/10.1128/mbio.01018-16}{10.1128/mbio.01018-16}.
+
+\hypertarget{ref-Walters2014}{}
+\DIFdelbegin \DIFdel{12. }\DIFdelend \DIFaddbegin \DIFadd{13. }\DIFaddend \textbf{Walters WA}, \textbf{Xu Z}, \textbf{Knight R}. 2014.
+Meta-analyses of human gut microbes associated with obesity and IBD.
+FEBS Letters \textbf{588}:4223--4233.
+doi:\href{https://doi.org/10.1016/j.febslet.2014.09.039}{10.1016/j.febslet.2014.09.039}.
+
+\hypertarget{ref-Finucane2014}{}
+\DIFdelbegin \DIFdel{13. }\DIFdelend \DIFaddbegin \DIFadd{14. }\DIFaddend \textbf{Finucane MM}, \textbf{Sharpton TJ}, \textbf{Laurent TJ},
+\textbf{Pollard KS}. 2014. A taxonomic signature of obesity in the
+microbiome? Getting to the guts of the matter. PLOS ONE
+\textbf{9}:e84689.
+doi:\href{https://doi.org/10.1371/journal.pone.0084689}{10.1371/journal.pone.0084689}.
+
+\hypertarget{ref-Turnbaugh2008}{}
+\DIFdelbegin \DIFdel{14. }\DIFdelend \DIFaddbegin \DIFadd{15. }\DIFaddend \textbf{Turnbaugh PJ}, \textbf{Hamady M}, \textbf{Yatsunenko T},
+\textbf{Cantarel BL}, \textbf{Duncan A}, \textbf{Ley RE}, \textbf{Sogin
+ML}, \textbf{Jones WJ}, \textbf{Roe BA}, \textbf{Affourtit JP},
+\textbf{Egholm M}, \textbf{Henrissat B}, \textbf{Heath AC},
+\textbf{Knight R}, \textbf{Gordon JI}. 2008. A core gut microbiome in
+obese and lean twins. Nature \textbf{457}:480--484.
+doi:\href{https://doi.org/10.1038/nature07540}{10.1038/nature07540}.
+
+\hypertarget{ref-Turnbaugh2006}{}
+\DIFdelbegin \DIFdel{15. }\DIFdelend \DIFaddbegin \DIFadd{16. }\DIFaddend \textbf{Turnbaugh PJ}, \textbf{Ley RE}, \textbf{Mahowald MA},
+\textbf{Magrini V}, \textbf{Mardis ER}, \textbf{Gordon JI}. 2006. An
+obesity-associated gut microbiome with increased capacity for energy
+harvest. Nature \textbf{444}:1027--131.
+doi:\href{https://doi.org/10.1038/nature05414}{10.1038/nature05414}.
+
+\hypertarget{ref-Ley2005}{}
+\DIFdelbegin \DIFdel{16. }\DIFdelend \DIFaddbegin \DIFadd{17. }\DIFaddend \textbf{Ley RE}, \textbf{Backhed F}, \textbf{Turnbaugh P},
+\textbf{Lozupone CA}, \textbf{Knight RD}, \textbf{Gordon JI}. 2005.
+Obesity alters gut microbial ecology. Proceedings of the National
+Academy of Sciences \textbf{102}:11070--11075.
+doi:\href{https://doi.org/10.1073/pnas.0504978102}{10.1073/pnas.0504978102}.
+
+\hypertarget{ref-Ley2006}{}
+\DIFdelbegin \DIFdel{17. }\DIFdelend \DIFaddbegin \DIFadd{18. }\DIFaddend \textbf{Ley RE}, \textbf{Turnbaugh PJ}, \textbf{Klein S},
+\textbf{Gordon JI}. 2006. Human gut microbes associated with obesity.
+Nature \textbf{444}:1022--1023.
+doi:\href{https://doi.org/10.1038/4441022a}{10.1038/4441022a}.
+
+\DIFdelbegin %DIFDELCMD < \hypertarget{ref-Amstutz2016}{}
+%DIFDELCMD < %%%
+\DIFdel{18. }\textbf{\DIFdel{Amstutz P}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Crusoe MR}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Nebojša Tijanić}}%DIFAUXCMD
+\DIFdel{,
+}\textbf{\DIFdel{Chapman B}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Chilton J}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Heuer M}}%DIFAUXCMD
+\DIFdel{,
+}\textbf{\DIFdel{Kartashov A}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Leehr D}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Ménager H}}%DIFAUXCMD
+\DIFdel{,
+}\textbf{\DIFdel{Nedeljkovich M}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Scales M}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Soiland-Reyes S}}%DIFAUXCMD
+\DIFdel{,
+}\textbf{\DIFdel{Stojanovic L}}%DIFAUXCMD
+\DIFdel{. 2016. Common workflow language, v1.0.
+doi:}%DIFDELCMD < \href{https://doi.org/10.6084/m9.figshare.3115156.v2}{10.6084/m9.figshare.3115156.v2}%%%
+\DIFdel{.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend \hypertarget{ref-Langille2018}{}
+19. \textbf{Langille MGI}, \textbf{Ravel J}, \textbf{Fricke WF}. 2018.
+Available upon request: Not good enough for microbiome data! Microbiome
+\textbf{6}.
+doi:\href{https://doi.org/10.1186/s40168-017-0394-z}{10.1186/s40168-017-0394-z}.
+
+\hypertarget{ref-Ravel2014}{}
+20. \textbf{Ravel J}, \textbf{Wommack K}. 2014. All hail reproducibility
+in microbiome research. Microbiome \textbf{2}:8.
+doi:\href{https://doi.org/10.1186/2049-2618-2-8}{10.1186/2049-2618-2-8}.
+
+\hypertarget{ref-Zhernakova2016}{}
+21. \textbf{Zhernakova A}, \textbf{Kurilshikov A}, \textbf{Bonder MJ},
+\textbf{Tigchelaar EF}, \textbf{Schirmer M}, \textbf{Vatanen T},
+\textbf{Mujagic Z}, \textbf{Vila AV}, \textbf{Falony G},
+\textbf{Vieira-Silva S}, \textbf{Wang J}, \textbf{Imhann F},
+\textbf{Brandsma E}, \textbf{Jankipersadsing SA}, \textbf{Joossens M},
+\textbf{Cenit MC}, \textbf{Deelen P}, \textbf{Swertz MA},
+\textbf{Weersma RK}, \textbf{Feskens EJM}, \textbf{Netea MG},
+\textbf{Gevers D}, \textbf{Jonkers D}, \textbf{Franke L},
+\textbf{Aulchenko YS}, \textbf{Huttenhower C}, \textbf{Raes J},
+\textbf{Hofker MH}, \textbf{Xavier RJ}, \textbf{Wijmenga C}, \textbf{and
+JF}. 2016. Population-based metagenomics analysis reveals markers for
+gut microbiome composition and diversity. Science \textbf{352}:565--569.
+doi:\href{https://doi.org/10.1126/science.aad3369}{10.1126/science.aad3369}.
+
+\hypertarget{ref-Goodrich2016}{}
+22. \textbf{Goodrich JK}, \textbf{Davenport ER}, \textbf{Beaumont M},
+\textbf{Jackson MA}, \textbf{Knight R}, \textbf{Ober C}, \textbf{Spector
+TD}, \textbf{Bell JT}, \textbf{Clark AG}, \textbf{Ley RE}. 2016. Genetic
+determinants of the gut microbiome in UK twins. Cell Host \& Microbe
+\textbf{19}:731--743.
+doi:\href{https://doi.org/10.1016/j.chom.2016.04.017}{10.1016/j.chom.2016.04.017}.
+
+\hypertarget{ref-HMP2012}{}
+23. \textbf{Human Microbiome Project Consortium}. 2012. Structure,
+function and diversity of the healthy human microbiome. Nature
+\textbf{486}:207--214.
+doi:\href{https://doi.org/10.1038/nature11234}{10.1038/nature11234}.
+
+\hypertarget{ref-Zupancic2012}{}
+24. \textbf{Zupancic ML}, \textbf{Cantarel BL}, \textbf{Liu Z},
+\textbf{Drabek EF}, \textbf{Ryan KA}, \textbf{Cirimotich S},
+\textbf{Jones C}, \textbf{Knight R}, \textbf{Walters WA},
+\textbf{Knights D}, \textbf{Mongodin EF}, \textbf{Horenstein RB},
+\textbf{Mitchell BD}, \textbf{Steinle N}, \textbf{Snitker S},
+\textbf{Shuldiner AR}, \textbf{Fraser CM}. 2012. Analysis of the gut
+microbiota in the old order Amish and its relation to the metabolic
+syndrome. PLOS One \textbf{7}:e43052.
+doi:\href{https://doi.org/10.1371/journal.pone.0043052}{10.1371/journal.pone.0043052}.
+
+\DIFdelbegin %DIFDELCMD < \hypertarget{ref-Schloss2009}{}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \hypertarget{ref-Stodden2018}{}
+\DIFaddend 25. \DIFaddbegin \textbf{\DIFadd{Stodden V}}\DIFadd{, }\textbf{\DIFadd{Seiler J}}\DIFadd{, }\textbf{\DIFadd{Ma Z}}\DIFadd{. 2018. An
+empirical analysis of journal policy effectiveness for computational
+reproducibility. Proceedings of the National Academy of Sciences
+}\textbf{\DIFadd{115}}\DIFadd{:2584--2589.
+doi:}\href{https://doi.org/10.1073/pnas.1708290115}{10.1073/pnas.1708290115}\DIFadd{.
+}
+
+\hypertarget{ref-Klein2014}{}
+\DIFadd{26. }\textbf{\DIFadd{Klein M}}\DIFadd{, }\textbf{\DIFadd{Sompel HV de}}\DIFadd{, }\textbf{\DIFadd{Sanderson R}}\DIFadd{,
+}\textbf{\DIFadd{Shankar H}}\DIFadd{, }\textbf{\DIFadd{Balakireva L}}\DIFadd{, }\textbf{\DIFadd{Zhou K}}\DIFadd{,
+}\textbf{\DIFadd{Tobin R}}\DIFadd{. 2014. Scholarly context not found: One in five
+articles suffers from reference rot. PLOS ONE }\textbf{\DIFadd{9}}\DIFadd{:e115253.
+doi:}\href{https://doi.org/10.1371/journal.pone.0115253}{10.1371/journal.pone.0115253}\DIFadd{.
+}
+
+\hypertarget{ref-Schloss2009}{}
+\DIFadd{27. }\DIFaddend \textbf{Schloss PD}, \textbf{Westcott SL}, \textbf{Ryabin T},
+\textbf{Hall JR}, \textbf{Hartmann M}, \textbf{Hollister EB},
+\textbf{Lesniewski RA}, \textbf{Oakley BB}, \textbf{Parks DH},
+\textbf{Robinson CJ}, \textbf{others}. 2009. Introducing mothur:
+open-source, platform-independent, community-supported software for
+describing and comparing microbial communities. Applied and
+environmental microbiology \textbf{75}:7537--7541.
+
+\hypertarget{ref-Cole2013}{}
+\DIFdelbegin \DIFdel{26. }\DIFdelend \DIFaddbegin \DIFadd{28. }\DIFaddend \textbf{Cole JR}, \textbf{Wang Q}, \textbf{Fish JA}, \textbf{Chai
+B}, \textbf{McGarrell DM}, \textbf{Sun Y}, \textbf{Brown CT},
+\textbf{Porras-Alfaro A}, \textbf{Kuske CR}, \textbf{Tiedje JM}. 2013.
+Ribosomal database project: Data and tools for high throughput rRNA
+analysis. Nucleic Acids Research \textbf{42}:D633--D642.
+doi:\href{https://doi.org/10.1093/nar/gkt1244}{10.1093/nar/gkt1244}.
+
+\hypertarget{ref-Yilmaz2013}{}
+\DIFdelbegin \DIFdel{27. }\DIFdelend \DIFaddbegin \DIFadd{29. }\DIFaddend \textbf{Yilmaz P}, \textbf{Parfrey LW}, \textbf{Yarza P},
+\textbf{Gerken J}, \textbf{Pruesse E}, \textbf{Quast C}, \textbf{Schweer
+T}, \textbf{Peplies J}, \textbf{Ludwig W}, \textbf{Glöckner FO}. 2013.
+The SILVA and All-species living tree project (LTP) taxonomic
+frameworks. Nucleic Acids Research \textbf{42}:D643--D648.
+doi:\href{https://doi.org/10.1093/nar/gkt1209}{10.1093/nar/gkt1209}.
+
+\hypertarget{ref-DeSantis2006}{}
+\DIFdelbegin \DIFdel{28. }\DIFdelend \DIFaddbegin \DIFadd{30. }\DIFaddend \textbf{DeSantis TZ}, \textbf{Hugenholtz P}, \textbf{Larsen N},
+\textbf{Rojas M}, \textbf{Brodie EL}, \textbf{Keller K}, \textbf{Huber
+T}, \textbf{Dalevi D}, \textbf{Hu P}, \textbf{Andersen GL}. 2006.
+Greengenes, a chimera-checked 16S rRNA gene database and workbench
+compatible with ARB. Applied and Environmental Microbiology
+\textbf{72}:5069--5072.
+doi:\href{https://doi.org/10.1128/aem.03006-05}{10.1128/aem.03006-05}.
+
+\DIFdelbegin %DIFDELCMD < \hypertarget{ref-Klein2014}{}
+%DIFDELCMD < %%%
+\DIFdel{29. }\DIFdelend \DIFaddbegin \hypertarget{ref-Amstutz2016}{}
+\DIFadd{31. }\DIFaddend \textbf{\DIFdelbegin \DIFdel{Klein M}\DIFdelend \DIFaddbegin \DIFadd{Amstutz P}\DIFaddend }, \textbf{\DIFdelbegin \DIFdel{Sompel HV de}\DIFdelend \DIFaddbegin \DIFadd{Crusoe MR}\DIFaddend }, \textbf{\DIFdelbegin \DIFdel{Sanderson R}\DIFdelend \DIFaddbegin \DIFadd{Nebojša Tijanić}\DIFaddend },
+\textbf{\DIFdelbegin \DIFdel{Shankar H}\DIFdelend \DIFaddbegin \DIFadd{Chapman B}\DIFaddend }, \textbf{\DIFdelbegin \DIFdel{Balakireva L}\DIFdelend \DIFaddbegin \DIFadd{Chilton J}\DIFaddend }, \textbf{\DIFdelbegin \DIFdel{Zhou K}\DIFdelend \DIFaddbegin \DIFadd{Heuer M}\DIFaddend },
+\textbf{\DIFdelbegin \DIFdel{Tobin R}%DIFDELCMD < }%%%
+\DIFdel{. 2014. Scholarly context not found: One in five
+articles suffers from reference rot.
+PLOS ONE }\textbf{\DIFdel{9}}%DIFAUXCMD
+\DIFdelend \DIFaddbegin \DIFadd{Kartashov A}}\DIFadd{, }\textbf{\DIFadd{Leehr D}}\DIFadd{, }\textbf{\DIFadd{Ménager H}}\DIFadd{,
+}\textbf{\DIFadd{Nedeljkovich M}}\DIFadd{, }\textbf{\DIFadd{Scales M}}\DIFadd{, }\textbf{\DIFadd{Soiland-Reyes S}}\DIFadd{,
+}\textbf{\DIFadd{Stojanovic L}}\DIFadd{. 2016. Common workflow language, v1.0.
+doi}\DIFaddend :\DIFdelbegin \DIFdel{e115253.
+doi:}%DIFDELCMD < \href{https://doi.org/10.1371/journal.pone.0115253}{10.1371/journal.pone.0115253}%%%
+\DIFdelend \DIFaddbegin \href{https://doi.org/10.6084/m9.figshare.3115156.v2}{10.6084/m9.figshare.3115156.v2}\DIFaddend .
+
+\DIFaddbegin \hypertarget{ref-Xie2015}{}
+\DIFadd{32. }\textbf{\DIFadd{Xie Y}}\DIFadd{. 2015. Dynamic documents with R and knitr, 2nd ed.
+Chapman; Hall/CRC, Boca Raton, Florida.
+}
+
+\hypertarget{ref-Kluyver2016}{}
+\DIFadd{33. }\textbf{\DIFadd{Kluyver T}}\DIFadd{, }\textbf{\DIFadd{Ragan-Kelley B}}\DIFadd{, }\textbf{\DIFadd{Pérez F}}\DIFadd{,
+}\textbf{\DIFadd{Granger B}}\DIFadd{, }\textbf{\DIFadd{Bussonnier M}}\DIFadd{, }\textbf{\DIFadd{Frederic J}}\DIFadd{,
+}\textbf{\DIFadd{Kelley K}}\DIFadd{, }\textbf{\DIFadd{Hamrick J}}\DIFadd{, }\textbf{\DIFadd{Grout J}}\DIFadd{, }\textbf{\DIFadd{Corlay
+S}}\DIFadd{, }\textbf{\DIFadd{Ivanov P}}\DIFadd{, }\textbf{\DIFadd{Avila D}}\DIFadd{, }\textbf{\DIFadd{Abdalla S}}\DIFadd{,
+}\textbf{\DIFadd{Willing C}}\DIFadd{. 2016. Jupyter notebooks -- a publishing format for
+reproducible computational workflows. IOS Press.
+}
+
+\DIFaddend \hypertarget{ref-Gelman2014}{}
+\DIFdelbegin \DIFdel{30. }\DIFdelend \DIFaddbegin \DIFadd{34. }\DIFaddend \textbf{Gelman A}, \textbf{Loken E}. 2014. The statistical crisis in
+science. American Scientist \textbf{102}:460.
+doi:\href{https://doi.org/10.1511/2014.111.460}{10.1511/2014.111.460}.
+
+\hypertarget{ref-Head2015}{}
+\DIFdelbegin \DIFdel{31. }\DIFdelend \DIFaddbegin \DIFadd{35. }\DIFaddend \textbf{Head ML}, \textbf{Holman L}, \textbf{Lanfear R},
+\textbf{Kahn AT}, \textbf{Jennions MD}. 2015. The extent and
+consequences of p-hacking in science. PLOS Biology \textbf{13}:e1002106.
+doi:\href{https://doi.org/10.1371/journal.pbio.1002106}{10.1371/journal.pbio.1002106}.
+
+\hypertarget{ref-Errington2014}{}
+\DIFdelbegin \DIFdel{32. }\DIFdelend \DIFaddbegin \DIFadd{36. }\DIFaddend \textbf{Errington TM}, \textbf{Iorns E}, \textbf{Gunn W},
+\textbf{Tan FE}, \textbf{Lomax J}, \textbf{Nosek BA}. 2014. An open
+investigation of the reproducibility of cancer biology research. eLife
+\textbf{3}.
+doi:\href{https://doi.org/10.7554/elife.04333}{10.7554/elife.04333}.
+
+\hypertarget{ref-Pain2015}{}
+\DIFdelbegin \DIFdel{33. }\DIFdelend \DIFaddbegin \DIFadd{37. }\DIFaddend \textbf{Pain E}. 2015. Register your study as a new publication
+option. Science.
+doi:\href{https://doi.org/10.1126/science.caredit.a1500282}{10.1126/science.caredit.a1500282}.
+
+\hypertarget{ref-Nosek2017}{}
+\DIFdelbegin \DIFdel{34. }\DIFdelend \DIFaddbegin \DIFadd{38. }\DIFaddend \textbf{Nosek BA}, \textbf{Ebersole CR}, \textbf{DeHaven AC},
+\textbf{Mellor DT}. 2017. Preprint: The preregistration revolution. OSF
+Preprints.
+doi:\href{https://doi.org/10.17605/OSF.IO/2DXU5}{10.17605/OSF.IO/2DXU5}.
+
+\DIFdelbegin %DIFDELCMD < \hypertarget{ref-Xie2015}{}
+%DIFDELCMD < %%%
+\DIFdel{35. }\DIFdelend \DIFaddbegin \hypertarget{ref-Guo2014}{}
+\DIFadd{39. }\DIFaddend \textbf{\DIFdelbegin \DIFdel{Xie Y}%DIFDELCMD < }%%%
+\DIFdel{. 2015. Dynamic documents with R and
+knitr, 2nd ed. Chapman; Hall/CRC, Boca Raton, Florida. }%DIFDELCMD < 
+
+%DIFDELCMD < \hypertarget{ref-Kluyver2016}{}
+%DIFDELCMD < %%%
+\DIFdel{36. }%DIFDELCMD < \textbf{%%%
+\DIFdel{Kluyver T}%DIFDELCMD < }%%%
+\DIFdel{, }%DIFDELCMD < \textbf{%%%
+\DIFdel{Ragan-Kelley B}%DIFDELCMD < }%%%
+\DIFdel{, }%DIFDELCMD < \textbf{%%%
+\DIFdel{Pérez F}\DIFdelend \DIFaddbegin \DIFadd{Guo Q}\DIFaddend }, \DIFdelbegin \textbf{\DIFdel{Granger B}}%DIFAUXCMD
+\DIFdelend \DIFaddbegin \textbf{\DIFadd{Thabane L}}\DIFaddend , \DIFdelbegin \textbf{\DIFdel{Bussonnier M}}%DIFAUXCMD
+\DIFdelend \DIFaddbegin \textbf{\DIFadd{Hall G}}\DIFaddend ,
+\DIFdelbegin \textbf{\DIFdel{Frederic J}}%DIFAUXCMD
+\DIFdelend \DIFaddbegin \textbf{\DIFadd{McKinnon M}}\DIFaddend , \DIFdelbegin \textbf{\DIFdel{Kelley K}}%DIFAUXCMD
+\DIFdelend \DIFaddbegin \textbf{\DIFadd{Goeree R}}\DIFaddend , \DIFdelbegin \textbf{\DIFdel{Hamrick J}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Grout J}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Corlay
+S}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Ivanov P}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Avila D}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Abdalla S}}%DIFAUXCMD
+\DIFdel{,
+}\textbf{\DIFdel{Willing C}}%DIFAUXCMD
+\DIFdel{. }\DIFdelend \DIFaddbegin \textbf{\DIFadd{Pullenayegum E}}\DIFadd{. 2014. A
+systematic review of the reporting of sample size calculations and
+corresponding data components in observational functional magnetic
+resonance imaging studies. NeuroImage }\textbf{\DIFadd{86}}\DIFadd{:172--181.
+doi:}\href{https://doi.org/10.1016/j.neuroimage.2013.08.012}{10.1016/j.neuroimage.2013.08.012}\DIFadd{.
+}
+
+\hypertarget{ref-Ioannidis2005}{}
+\DIFadd{40. }\textbf{\DIFadd{Ioannidis JPA}}\DIFadd{. 2005. Why most published research findings
+are false. PLOS Medicine }\textbf{\DIFadd{2}}\DIFadd{:e124.
+doi:}\href{https://doi.org/10.1371/journal.pmed.0020124}{10.1371/journal.pmed.0020124}\DIFadd{.
+}
+
+\hypertarget{ref-Etz2016}{}
+\DIFadd{41. }\textbf{\DIFadd{Etz A}}\DIFadd{, }\textbf{\DIFadd{Vandekerckhove J}}\DIFadd{. }\DIFaddend 2016. \DIFdelbegin \DIFdel{Jupyter notebooks -- a publishing format for
+reproducible computational workflows. IOS Press.
+}\DIFdelend \DIFaddbegin \DIFadd{A bayesian
+perspective on the reproducibility project: Psychology. PLOS ONE
+}\textbf{\DIFadd{11}}\DIFadd{:e0149794.
+doi:}\href{https://doi.org/10.1371/journal.pone.0149794}{10.1371/journal.pone.0149794}\DIFadd{.
+}\DIFaddend 
+
+\DIFaddbegin \hypertarget{ref-Gelman2012}{}
+\DIFadd{42. }\textbf{\DIFadd{Gelman A}}\DIFadd{, }\textbf{\DIFadd{Hill J}}\DIFadd{, }\textbf{\DIFadd{Yajima M}}\DIFadd{. 2012. Why we
+(usually) dont have to worry about multiple comparisons. Journal of
+Research on Educational Effectiveness }\textbf{\DIFadd{5}}\DIFadd{:189--211.
+doi:}\href{https://doi.org/10.1080/19345747.2011.618213}{10.1080/19345747.2011.618213}\DIFadd{.
+}
+
+\DIFaddend \hypertarget{ref-Leek2010}{}
+\DIFdelbegin \DIFdel{37. }\DIFdelend \DIFaddbegin \DIFadd{43. }\DIFaddend \textbf{Leek JT}, \textbf{Scharpf RB}, \textbf{Bravo HC},
+\textbf{Simcha D}, \textbf{Langmead B}, \textbf{Johnson WE},
+\textbf{Geman D}, \textbf{Baggerly K}, \textbf{Irizarry RA}. 2010.
+Tackling the widespread and critical impact of batch effects in
+high-throughput data. Nature Reviews Genetics \textbf{11}:733--739.
+doi:\href{https://doi.org/10.1038/nrg2825}{10.1038/nrg2825}.
+
+\hypertarget{ref-Ding2014}{}
+\DIFdelbegin \DIFdel{38. }\DIFdelend \DIFaddbegin \DIFadd{44. }\DIFaddend \textbf{Ding T}, \textbf{Schloss PD}. 2014. Dynamics and
+associations of microbial community types across the human body. Nature
+\textbf{509}:357--360.
+doi:\href{https://doi.org/10.1038/nature13178}{10.1038/nature13178}.
+
+\hypertarget{ref-Kim2017}{}
+\DIFdelbegin \DIFdel{39. }\DIFdelend \DIFaddbegin \DIFadd{45. }\DIFaddend \textbf{Kim D}, \textbf{Hofstaedter CE}, \textbf{Zhao C},
+\textbf{Mattei L}, \textbf{Tanes C}, \textbf{Clarke E}, \textbf{Lauder
+A}, \textbf{Sherrill-Mix S}, \textbf{Chehoud C}, \textbf{Kelsen J},
+\textbf{Conrad M}, \textbf{Collman RG}, \textbf{Baldassano R},
+\textbf{Bushman FD}, \textbf{Bittinger K}. 2017. Optimizing methods and
+dodging pitfalls in microbiome research. Microbiome \textbf{5}.
+doi:\href{https://doi.org/10.1186/s40168-017-0267-5}{10.1186/s40168-017-0267-5}.
+
+\hypertarget{ref-Ivanov2008}{}
+\DIFdelbegin \DIFdel{40. }\DIFdelend \DIFaddbegin \DIFadd{46. }\DIFaddend \textbf{Ivanov II}, \textbf{Llanos Frutos R de}, \textbf{Manel N},
+\textbf{Yoshinaga K}, \textbf{Rifkin DB}, \textbf{Sartor RB},
+\textbf{Finlay BB}, \textbf{Littman DR}. 2008. Specific microbiota
+direct the differentiation of IL-17-producing t-helper cells in the
+mucosa of the small intestine. Cell Host \& Microbe \textbf{4}:337--349.
+doi:\href{https://doi.org/10.1016/j.chom.2008.09.009}{10.1016/j.chom.2008.09.009}.
+
+\hypertarget{ref-Ivanov2009}{}
+\DIFdelbegin \DIFdel{41. }\DIFdelend \DIFaddbegin \DIFadd{47. }\DIFaddend \textbf{Ivanov II}, \textbf{Atarashi K}, \textbf{Manel N},
+\textbf{Brodie EL}, \textbf{Shima T}, \textbf{Karaoz U}, \textbf{Wei D},
+\textbf{Goldfarb KC}, \textbf{Santee CA}, \textbf{Lynch SV},
+\textbf{Tanoue T}, \textbf{Imaoka A}, \textbf{Itoh K}, \textbf{Takeda
+K}, \textbf{Umesaki Y}, \textbf{Honda K}, \textbf{Littman DR}. 2009.
+Induction of intestinal th17 cells by segmented filamentous bacteria.
+Cell \textbf{139}:485--498.
+doi:\href{https://doi.org/10.1016/j.cell.2009.09.033}{10.1016/j.cell.2009.09.033}.
+
+\hypertarget{ref-Laukens2015}{}
+\DIFdelbegin \DIFdel{42. }\DIFdelend \DIFaddbegin \DIFadd{48. }\DIFaddend \textbf{Laukens D}, \textbf{Brinkman BM}, \textbf{Raes J},
+\textbf{Vos MD}, \textbf{Vandenabeele P}. 2015. Heterogeneity of the gut
+microbiome in mice: Guidelines for optimizing experimental design. FEMS
+Microbiology Reviews \textbf{40}:117--132.
+doi:\href{https://doi.org/10.1093/femsre/fuv036}{10.1093/femsre/fuv036}.
+
+\hypertarget{ref-Horbach2017}{}
+\DIFdelbegin \DIFdel{43. }\DIFdelend \DIFaddbegin \DIFadd{49. }\DIFaddend \textbf{Horbach SPJM}, \textbf{Halffman W}. 2017. The ghosts of
+HeLa: How cell line misidentification contaminates the scientific
+literature. PLOS ONE \textbf{12}:e0186281.
+doi:\href{https://doi.org/10.1371/journal.pone.0186281}{10.1371/journal.pone.0186281}.
+
+\hypertarget{ref-Huang2017}{}
+\DIFdelbegin \DIFdel{44. }\DIFdelend \DIFaddbegin \DIFadd{50. }\DIFaddend \textbf{Huang Y}, \textbf{Liu Y}, \textbf{Zheng C}, \textbf{Shen C}.
+2017. Investigation of cross-contamination and misidentification of 278
+widely used tumor cell lines. PLOS ONE \textbf{12}:e0170384.
+doi:\href{https://doi.org/10.1371/journal.pone.0170384}{10.1371/journal.pone.0170384}.
+
+\hypertarget{ref-Han2013}{}
+\DIFdelbegin \DIFdel{45. }\DIFdelend \DIFaddbegin \DIFadd{51. }\DIFaddend \textbf{Han S-W}, \textbf{Sriariyanun M}, \textbf{Lee S-W},
+\textbf{Sharma M}, \textbf{Bahar O}, \textbf{Bower Z}, \textbf{Ronald
+PC}. 2013. Retraction: Small protein-mediated quorum sensing in a
+gram-negative bacterium. PLOS ONE \textbf{8}.
+doi:\href{https://doi.org/10.1371/annotation/880a72e1-9cf3-45a9-bf1c-c74ccb73fd35}{10.1371/annotation/880a72e1-9cf3-45a9-bf1c-c74ccb73fd35}.
+
+\hypertarget{ref-Lee2013}{}
+\DIFdelbegin \DIFdel{46. }\DIFdelend \DIFaddbegin \DIFadd{52. }\DIFaddend \textbf{Lee S-W}, \textbf{Han S-W}, \textbf{Sririyanum M},
+\textbf{Park C-J}, \textbf{Seo Y-S}, \textbf{Ronald PC}. 2013.
+Retraction. Science \textbf{342}:191--191.
+doi:\href{https://doi.org/10.1126/science.342.6155.191-a}{10.1126/science.342.6155.191-a}.
+
+\hypertarget{ref-Salter2014}{}
+\DIFdelbegin \DIFdel{47. }\DIFdelend \DIFaddbegin \DIFadd{53. }\DIFaddend \textbf{Salter SJ}, \textbf{Cox MJ}, \textbf{Turek EM},
+\textbf{Calus ST}, \textbf{Cookson WO}, \textbf{Moffatt MF},
+\textbf{Turner P}, \textbf{Parkhill J}, \textbf{Loman NJ},
+\textbf{Walker AW}. 2014. Reagent and laboratory contamination can
+critically impact sequence-based microbiome analyses. BMC Biology
+\textbf{12}.
+doi:\href{https://doi.org/10.1186/s12915-014-0087-z}{10.1186/s12915-014-0087-z}.
+
+\hypertarget{ref-PerezMuoz2017}{}
+\DIFdelbegin \DIFdel{48. }\DIFdelend \DIFaddbegin \DIFadd{54. }\DIFaddend \textbf{Perez-Muñoz ME}, \textbf{Arrieta M-C}, \textbf{Ramer-Tait
+AE}, \textbf{Walter J}. 2017. A critical assessment of the sterile womb
+and in utero colonization hypotheses: Implications for research on the
+pioneer infant microbiome. Microbiome \textbf{5}.
+doi:\href{https://doi.org/10.1186/s40168-017-0268-4}{10.1186/s40168-017-0268-4}.
+
+\hypertarget{ref-Lauder2016}{}
+\DIFdelbegin \DIFdel{49. }\DIFdelend \DIFaddbegin \DIFadd{55. }\DIFaddend \textbf{Lauder AP}, \textbf{Roche AM}, \textbf{Sherrill-Mix S},
+\textbf{Bailey A}, \textbf{Laughlin AL}, \textbf{Bittinger K},
+\textbf{Leite R}, \textbf{Elovitz MA}, \textbf{Parry S}, \textbf{Bushman
+FD}. 2016. Comparison of placenta samples with contamination controls
+does not provide evidence for a distinct placenta microbiota. Microbiome
+\textbf{4}.
+doi:\href{https://doi.org/10.1186/s40168-016-0172-3}{10.1186/s40168-016-0172-3}.
+
+\hypertarget{ref-Morris2013}{}
+\DIFdelbegin \DIFdel{50. }\DIFdelend \DIFaddbegin \DIFadd{56. }\DIFaddend \textbf{Morris A}, \textbf{Beck JM}, \textbf{Schloss PD},
+\textbf{Campbell TB}, \textbf{Crothers K}, \textbf{Curtis JL},
+\textbf{Flores SC}, \textbf{Fontenot AP}, \textbf{Ghedin E},
+\textbf{Huang L}, \textbf{Jablonski K}, \textbf{Kleerup E},
+\textbf{Lynch SV}, \textbf{Sodergren E}, \textbf{Twigg H}, \textbf{Young
+VB}, \textbf{Bassis CM}, \textbf{Venkataraman A}, \textbf{Schmidt TM},
+\textbf{Weinstock GM}. 2013. Comparison of the respiratory microbiome in
+healthy nonsmokers and smokers. American Journal of Respiratory and
+Critical Care Medicine \textbf{187}:1067--1075.
+doi:\href{https://doi.org/10.1164/rccm.201210-1913oc}{10.1164/rccm.201210-1913oc}.
+
+\DIFdelbegin %DIFDELCMD < \hypertarget{ref-Guo2014}{}
+%DIFDELCMD < %%%
+\DIFdel{51. }\textbf{\DIFdel{Guo Q}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Thabane L}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Hall G}}%DIFAUXCMD
+\DIFdel{,
+}\textbf{\DIFdel{McKinnon M}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Goeree R}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Pullenayegum E}}%DIFAUXCMD
+\DIFdel{. 2014. A
+systematic review of the reporting of sample size calculations and
+corresponding data components in observational functional magnetic
+resonance imaging studies. NeuroImage }\textbf{\DIFdel{86}}%DIFAUXCMD
+\DIFdel{:172--181.
+doi:}%DIFDELCMD < \href{https://doi.org/10.1016/j.neuroimage.2013.08.012}{10.1016/j.neuroimage.2013.08.012}%%%
+\DIFdel{.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \hypertarget{ref-Ioannidis2005}{}
+%DIFDELCMD < %%%
+\DIFdel{52. }\textbf{\DIFdel{Ioannidis JPA}}%DIFAUXCMD
+\DIFdel{. 2005. Why most published research findings
+are false. PLOS Medicine }\textbf{\DIFdel{2}}%DIFAUXCMD
+\DIFdel{:e124.
+doi:}%DIFDELCMD < \href{https://doi.org/10.1371/journal.pmed.0020124}{10.1371/journal.pmed.0020124}%%%
+\DIFdel{.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \hypertarget{ref-Etz2016}{}
+%DIFDELCMD < %%%
+\DIFdel{53. }\textbf{\DIFdel{Etz A}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Vandekerckhove J}}%DIFAUXCMD
+\DIFdel{. 2016. A bayesian
+perspective on the reproducibility project: Psychology. PLOS ONE
+}\textbf{\DIFdel{11}}%DIFAUXCMD
+\DIFdel{:e0149794.
+doi:}%DIFDELCMD < \href{https://doi.org/10.1371/journal.pone.0149794}{10.1371/journal.pone.0149794}%%%
+\DIFdel{.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \hypertarget{ref-Gelman2012}{}
+%DIFDELCMD < %%%
+\DIFdel{54. }\textbf{\DIFdel{Gelman A}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Hill J}}%DIFAUXCMD
+\DIFdel{, }\textbf{\DIFdel{Yajima M}}%DIFAUXCMD
+\DIFdel{. 2012. Why we
+(usually) dont have to worry about multiple comparisons. Journal of
+Research on Educational Effectiveness }\textbf{\DIFdel{5}}%DIFAUXCMD
+\DIFdel{:189--211.
+doi:}%DIFDELCMD < \href{https://doi.org/10.1080/19345747.2011.618213}{10.1080/19345747.2011.618213}%%%
+\DIFdel{.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend \hypertarget{ref-Munaf2018}{}
+\DIFdelbegin \DIFdel{55. }\DIFdelend \DIFaddbegin \DIFadd{57. }\DIFaddend \textbf{Munafò MR}, \textbf{Smith GD}. 2018. Robust research needs
+many lines of evidence. Nature \textbf{553}:399--401.
+doi:\href{https://doi.org/10.1038/d41586-018-01023-3}{10.1038/d41586-018-01023-3}.
+
+\hypertarget{ref-Mallick2017}{}
+\DIFdelbegin \DIFdel{56. }\DIFdelend \DIFaddbegin \DIFadd{58. }\DIFaddend \textbf{Mallick H}, \textbf{Ma S}, \textbf{Franzosa EA},
+\textbf{Vatanen T}, \textbf{Morgan XC}, \textbf{Huttenhower C}. 2017.
+Experimental design and quantitative analysis of microbial community
+multiomics. Genome Biology \textbf{18}.
+doi:\href{https://doi.org/10.1186/s13059-017-1359-z}{10.1186/s13059-017-1359-z}.
+
+\hypertarget{ref-Jenior2017}{}
+\DIFdelbegin \DIFdel{57. }\DIFdelend \DIFaddbegin \DIFadd{59. }\DIFaddend \textbf{Jenior ML}, \textbf{Leslie JL}, \textbf{Young VB},
+\textbf{Schloss PD}. 2017. \emph{Clostridium difficile} colonizes
+alternative nutrient niches during infection across distinct murine gut
+microbiomes. mSystems \textbf{2}:e00063--17.
+doi:\href{https://doi.org/10.1128/msystems.00063-17}{10.1128/msystems.00063-17}.
+
+\hypertarget{ref-Califf2017}{}
+\DIFdelbegin \DIFdel{58. }\DIFdelend \DIFaddbegin \DIFadd{60. }\DIFaddend \textbf{Califf KJ}, \textbf{Schwarzberg-Lipson K}, \textbf{Garg N},
+\textbf{Gibbons SM}, \textbf{Caporaso JG}, \textbf{Slots J},
+\textbf{Cohen C}, \textbf{Dorrestein PC}, \textbf{Kelley ST}. 2017.
+Multi-omics analysis of periodontal pocket microbial communities pre-
+and posttreatment. mSystems \textbf{2}:e00016--17.
+doi:\href{https://doi.org/10.1128/msystems.00016-17}{10.1128/msystems.00016-17}.
+
+\hypertarget{ref-Pearson2003}{}
+\DIFdelbegin \DIFdel{59. }\DIFdelend \DIFaddbegin \DIFadd{61. }\DIFaddend \textbf{Pearson H}. 2003. Competition in biology: Its a scoop!
+News@Nature.
+doi:\href{https://doi.org/10.1038/news031124-9}{10.1038/news031124-9}.
+
+\hypertarget{ref-PB2018}{}
+\DIFdelbegin \DIFdel{60. }\DIFdelend \DIFaddbegin \DIFadd{62. }\DIFaddend \textbf{The PLOS Biology Staff Editors}. 2018. The importance of
+being second. PLOS Biology \textbf{16}:e2005203.
+doi:\href{https://doi.org/10.1371/journal.pbio.2005203}{10.1371/journal.pbio.2005203}.
+
+\hypertarget{ref-Seok2013}{}
+\DIFdelbegin \DIFdel{61. }\DIFdelend \DIFaddbegin \DIFadd{63. }\DIFaddend \textbf{Seok J}, \textbf{Warren HS}, \textbf{Cuenca AG},
+\textbf{Mindrinos MN}, \textbf{Baker HV}, \textbf{Xu W},
+\textbf{Richards DR}, \textbf{McDonald-Smith GP}, \textbf{Gao H},
+\textbf{Hennessy L}, \textbf{Finnerty CC}, \textbf{López CM},
+\textbf{Honari S}, \textbf{Moore EE}, \textbf{Minei JP},
+\textbf{Cuschieri J}, \textbf{Bankey PE}, \textbf{Johnson JL},
+\textbf{Sperry J}, \textbf{Nathens AB}, \textbf{Billiar TR},
+\textbf{West MA}, \textbf{Jeschke MG}, \textbf{Klein MB},
+\textbf{Gamelli RL}, \textbf{Gibran NS}, \textbf{Brownstein BH},
+\textbf{Miller-Graziano C}, \textbf{Calvano SE}, \textbf{Mason PH},
+\textbf{Cobb JP}, \textbf{Rahme LG}, \textbf{Lowry SF}, \textbf{Maier
+RV}, \textbf{Moldawer LL}, \textbf{Herndon DN}, \textbf{Davis RW},
+\textbf{Xiao W}, \textbf{and RGT}. 2013. Genomic responses in mouse
+models poorly mimic human inflammatory diseases. Proceedings of the
+National Academy of Sciences \textbf{110}:3507--3512.
+doi:\href{https://doi.org/10.1073/pnas.1222878110}{10.1073/pnas.1222878110}.
+
+\hypertarget{ref-Nguyen2015}{}
+\DIFdelbegin \DIFdel{62. }\DIFdelend \DIFaddbegin \DIFadd{64. }\DIFaddend \textbf{Nguyen TLA}, \textbf{Vieira-Silva S}, \textbf{Liston A},
+\textbf{Raes J}. 2015. How informative is the mouse for human gut
+microbiota research? Disease Models \& Mechanisms \textbf{8}:1--16.
+doi:\href{https://doi.org/10.1242/dmm.017400}{10.1242/dmm.017400}.
+
+\hypertarget{ref-Wilson2017}{}
+\DIFdelbegin \DIFdel{63. }\DIFdelend \DIFaddbegin \DIFadd{65. }\DIFaddend \textbf{Wilson G}, \textbf{Bryan J}, \textbf{Cranston K},
+\textbf{Kitzes J}, \textbf{Nederbragt L}, \textbf{Teal TK}. 2017. Good
+enough practices in scientific computing. PLOS Computational Biology
+\textbf{13}:e1005510.
+doi:\href{https://doi.org/10.1371/journal.pcbi.1005510}{10.1371/journal.pcbi.1005510}.
+
+\hypertarget{ref-Noble2009}{}
+\DIFdelbegin \DIFdel{64. }\DIFdelend \DIFaddbegin \DIFadd{66. }\DIFaddend \textbf{Noble WS}. 2009. A quick guide to organizing computational
+biology projects. PLOS Computational Biology \textbf{5}:e1000424.
+doi:\href{https://doi.org/10.1371/journal.pcbi.1000424}{10.1371/journal.pcbi.1000424}.
+
+\hypertarget{ref-Taschuk2017}{}
+\DIFdelbegin \DIFdel{65. }\DIFdelend \DIFaddbegin \DIFadd{67. }\DIFaddend \textbf{Taschuk M}, \textbf{Wilson G}. 2017. Ten simple rules for
+making research software more robust. PLOS Computational Biology
+\textbf{13}:e1005412.
+doi:\href{https://doi.org/10.1371/journal.pcbi.1005412}{10.1371/journal.pcbi.1005412}.
+
+\hypertarget{ref-Hart2016}{}
+\DIFdelbegin \DIFdel{66. }\DIFdelend \DIFaddbegin \DIFadd{68. }\DIFaddend \textbf{Hart EM}, \textbf{Barmby P}, \textbf{LeBauer D},
+\textbf{Michonneau F}, \textbf{Mount S}, \textbf{Mulrooney P},
+\textbf{Poisot T}, \textbf{Woo KH}, \textbf{Zimmerman NB},
+\textbf{Hollister JW}. 2016. Ten simple rules for digital data storage.
+PLOS Computational Biology \textbf{12}:e1005097.
+doi:\href{https://doi.org/10.1371/journal.pcbi.1005097}{10.1371/journal.pcbi.1005097}.
+
+\hypertarget{ref-PerezRiverol2016}{}
+\DIFdelbegin \DIFdel{67. }\DIFdelend \DIFaddbegin \DIFadd{69. }\DIFaddend \textbf{Perez-Riverol Y}, \textbf{Gatto L}, \textbf{Wang R},
+\textbf{Sachsenberg T}, \textbf{Uszkoreit J}, \textbf{Veiga Leprevost F
+da}, \textbf{Fufezan C}, \textbf{Ternent T}, \textbf{Eglen SJ},
+\textbf{Katz DS}, \textbf{Pollard TJ}, \textbf{Konovalov A},
+\textbf{Flight RM}, \textbf{Blin K}, \textbf{Vizcaíno JA}. 2016. Ten
+simple rules for taking advantage of git and GitHub. PLOS Computational
+Biology \textbf{12}:e1004947.
+doi:\href{https://doi.org/10.1371/journal.pcbi.1004947}{10.1371/journal.pcbi.1004947}.
+
+\hypertarget{ref-Sandve2013}{}
+\DIFdelbegin \DIFdel{68. }\DIFdelend \DIFaddbegin \DIFadd{70. }\DIFaddend \textbf{Sandve GK}, \textbf{Nekrutenko A}, \textbf{Taylor J},
+\textbf{Hovig E}. 2013. Ten simple rules for reproducible computational
+research. PLOS Computational Biology \textbf{9}:e1003285.
+doi:\href{https://doi.org/10.1371/journal.pcbi.1003285}{10.1371/journal.pcbi.1003285}.
+
+\hypertarget{ref-Wilson2016}{}
+\DIFdelbegin \DIFdel{69. }\DIFdelend \DIFaddbegin \DIFadd{71. }\DIFaddend \textbf{Wilson G}. 2016. Software carpentry: Lessons learned.
+F1000Research.
+doi:\href{https://doi.org/10.12688/f1000research.3-62.v2}{10.12688/f1000research.3-62.v2}.
+
+\end{document}
